@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Mail, Github, Linkedin } from "lucide-react";
 import GradientText from "@/components/gradient-text";
 import TechSlider from "@/components/tech-slider";
 
@@ -81,20 +81,34 @@ export default function Home() {
         </motion.div>
 
         {/* CTA Buttons */}
-        <motion.div variants={item} className="flex justify-center gap-4 pt-10">
+        <motion.div
+          variants={item}
+          className="flex justify-center gap-3 sm:gap-4 pt-10 flex-wrap"
+        >
           <a
-            href="mailto:iauemre@gmail.com"
-            className="inline-flex items-center justify-center px-8 py-2.5 rounded border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-500 transition-all text-sm min-w-[140px]"
+            href="https://www.linkedin.com/in/yunus-emre-uveyik-8824bb72/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-2.5 rounded text-neutral-700 dark:text-neutral-300 transition-all duration-300 text-sm border border-violet-400 dark:border-violet-500/50 hover:border-violet-500 dark:hover:border-violet-400 shadow-[0_0_20px_rgba(139,92,246,0.2)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)]"
           >
-            {t("contactMe")}
+            <Linkedin className="w-4 h-4" />
+            {t("linkedin")}
           </a>
           <a
             href="https://github.com/yunusemreuveyik"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-2.5 rounded text-neutral-700 dark:text-neutral-300 transition-all duration-300 text-sm min-w-[140px] border border-violet-400 dark:border-violet-500/50 hover:border-violet-500 dark:hover:border-violet-400 shadow-[0_0_20px_rgba(139,92,246,0.2)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)]"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-2.5 rounded text-neutral-700 dark:text-neutral-300 transition-all duration-300 text-sm border border-violet-400 dark:border-violet-500/50 hover:border-violet-500 dark:hover:border-violet-400 shadow-[0_0_20px_rgba(139,92,246,0.2)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)]"
           >
-            {t("viewGitHub")}
+            <Github className="w-4 h-4" />
+            {t("github")}
+          </a>
+          <a
+            href="mailto:iauemre@gmail.com"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-2.5 rounded border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-500 transition-all text-sm"
+          >
+            <Mail className="w-4 h-4" />
+            {t("mailMe")}
           </a>
         </motion.div>
 

@@ -17,8 +17,9 @@
     "subtitle": "8+ years crafting scalable web & mobile experiences",
     "description": "Ex-Microsoft contractor reaching 1B+ users • React, TypeScript & React Native specialist",
     "scrollHint": "Scroll down to explore my skills & experience",
-    "contactMe": "Contact Me",
-    "viewGitHub": "GitHub"
+    "mailMe": "Mail Me",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   },
   "about": {
     "title": "About",
