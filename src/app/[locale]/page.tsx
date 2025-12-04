@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ChevronDown, Mail, Github, Linkedin } from "lucide-react";
 import GradientText from "@/components/gradient-text";
 import TechSlider from "@/components/tech-slider";
+import Badge, { MicrosoftIcon } from "@/components/badge";
 
 const container = {
   hidden: { opacity: 0 },
@@ -65,6 +66,11 @@ export default function Home() {
             </span>
             <GradientText className="font-medium">Developer</GradientText>
           </p>
+
+          {/* Ex-Microsoft badge */}
+          <div className="flex justify-center pt-3">
+            <Badge icon={<MicrosoftIcon />}>Ex-Microsoft</Badge>
+          </div>
         </motion.div>
 
         {/* Scroll hint text */}
