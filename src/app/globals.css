@@ -36,7 +36,7 @@ body {
 }
 
 .animate-infinite-scroll {
-  animation: infinite-scroll 250s linear infinite;
+  animation: infinite-scroll 300s linear infinite;
   will-change: transform;
 }
 

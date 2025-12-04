@@ -12,6 +12,11 @@ const techStack = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
+    name: "Expo",
+    logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/expo.svg",
+    invertDark: true,
+  },
+  {
     name: "TypeScript",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },

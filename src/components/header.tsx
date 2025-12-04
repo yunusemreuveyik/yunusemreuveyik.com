@@ -116,23 +116,23 @@ export default function Header() {
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
             >
-              <div className="bg-neutral-900 rounded-t-2xl border-t border-neutral-800 max-h-[85vh] overflow-auto">
+              <div className="bg-white dark:bg-neutral-900 rounded-t-2xl border-t border-neutral-200 dark:border-neutral-800 max-h-[85vh] overflow-auto shadow-2xl">
                 {/* Handle */}
                 <div className="flex justify-center pt-3 pb-2">
-                  <div className="w-10 h-1 bg-neutral-700 rounded-full" />
+                  <div className="w-10 h-1 bg-neutral-300 dark:bg-neutral-700 rounded-full" />
                 </div>
 
                 {/* Close Button Row */}
                 <div className="flex items-center justify-between px-4 pb-2">
-                  <span className="text-sm font-medium text-white">
+                  <span className="text-sm font-medium text-neutral-900 dark:text-white">
                     {t("menu")}
                   </span>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-neutral-800 transition-colors"
+                    className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                     aria-label="Close menu"
                   >
-                    <X className="w-5 h-5 text-neutral-400" />
+                    <X className="w-5 h-5 text-neutral-500 dark:text-neutral-400" />
                   </button>
                 </div>
 
@@ -152,8 +152,8 @@ export default function Header() {
                           onClick={() => setMobileMenuOpen(false)}
                           className={`flex items-center gap-3 px-4 py-3.5 rounded-xl transition-colors ${
                             isActive(item.href)
-                              ? "bg-neutral-800 text-white font-medium"
-                              : "text-neutral-400 hover:bg-neutral-800/50"
+                              ? "bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white font-medium"
+                              : "text-neutral-500 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
                           }`}
                         >
                           <Icon className="w-5 h-5" />
@@ -165,7 +165,7 @@ export default function Header() {
                 </nav>
 
                 {/* Footer actions */}
-                <div className="px-4 pb-6 flex items-center justify-center gap-4 border-t border-neutral-800 pt-4">
+                <div className="px-4 pb-6 flex items-center justify-center gap-4 border-t border-neutral-200 dark:border-neutral-800 pt-4">
                   <LocaleSwitcher />
                   <ThemeToggle />
                 </div>

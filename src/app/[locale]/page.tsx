@@ -40,20 +40,20 @@ export default function Home() {
 
         {/* Name with code brackets */}
         <motion.div variants={item} className="space-y-4">
-          <h1 className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap overflow-visible leading-tight py-2">
+          <h1 className="flex items-center justify-center gap-1.5 sm:gap-3 flex-nowrap overflow-visible leading-tight py-2">
             {/* Opening bracket */}
-            <span className="text-4xl sm:text-5xl md:text-6xl font-light text-neutral-400 dark:text-neutral-600 select-none">
+            <span className="text-2xl sm:text-5xl md:text-6xl font-light text-neutral-400 dark:text-neutral-600 select-none">
               &lt;&gt;
             </span>
             {/* Name */}
-            <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white tracking-tight">
+            <span className="text-2xl sm:text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white tracking-tight whitespace-nowrap">
               {t("firstName")}
             </span>{" "}
-            <GradientText className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
+            <GradientText className="text-2xl sm:text-5xl md:text-6xl font-bold tracking-tight">
               {t("lastName")}
             </GradientText>
             {/* Closing bracket */}
-            <span className="text-4xl sm:text-5xl md:text-6xl font-light text-neutral-400 dark:text-neutral-600 select-none">
+            <span className="text-2xl sm:text-5xl md:text-6xl font-light text-neutral-400 dark:text-neutral-600 select-none">
               &lt;/&gt;
             </span>
           </h1>
