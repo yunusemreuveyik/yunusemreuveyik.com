@@ -92,10 +92,7 @@ export default function Home() {
             href="https://github.com/yunusemreuveyik"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-2.5 rounded bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white transition-all text-sm min-w-[140px] border border-violet-400 dark:border-violet-500/50 hover:border-violet-500 dark:hover:border-violet-400"
-            style={{
-              boxShadow: "0 0 20px rgba(139, 92, 246, 0.2)",
-            }}
+            className="inline-flex items-center justify-center gap-2 px-8 py-2.5 rounded text-neutral-700 dark:text-neutral-300 transition-all duration-300 text-sm min-w-[140px] border border-violet-400 dark:border-violet-500/50 hover:border-violet-500 dark:hover:border-violet-400 shadow-[0_0_20px_rgba(139,92,246,0.2)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)]"
           >
             {t("viewGitHub")}
           </a>
