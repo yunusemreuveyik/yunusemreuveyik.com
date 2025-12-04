@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "blog": "Blog",
+    "projects": "Projeler",
+    "bookmarks": "Yer İmleri",
+    "menu": "Menü",
+    "search": "Ara",
+    "searchPlaceholder": "Ara..."
+  },
+  "hero": {
+    "welcome": "Dünyama hoşgeldiniz",
+    "firstName": "Yunus Emre",
+    "lastName": "Üveyik",
+    "role": "Kıdemli Frontend Mühendisi",
+    "subtitle": "8+ yıllık ölçeklenebilir web & mobil deneyim",
+    "description": "Ex-Microsoft kontratlı, 1 Milyar+ kullanıcıya ulaşan projeler • React, TypeScript & React Native uzmanı",
+    "scrollHint": "Yeteneklerimi ve deneyimlerimi keşfetmek için aşağı kaydırın",
+    "contactMe": "İletişime Geç",
+    "viewGitHub": "GitHub"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "p1": "Hızlı ve kullanıcıların sevdiği web & mobil deneyimler geliştiriyorum.",
+    "p2": "Ex-Microsoft • MotoFamily kurucusu • React/TypeScript tutkunu."
+  },
+  "blog": { "title": "Blog", "empty": "Henüz içerik yok." },
+  "projects": { "title": "Projeler", "description": "Çok yakında..." },
+  "bookmarks": { "title": "Yer İmleri", "description": "Çok yakında..." }
+}
