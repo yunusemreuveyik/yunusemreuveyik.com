@@ -12,6 +12,16 @@ const nextConfig = {
         hostname: "cdn.jsdelivr.net",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "eveara.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.medya-t.com",
+        pathname: "/**",
+      },
     ],
   },
 };

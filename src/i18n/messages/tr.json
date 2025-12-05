@@ -5,6 +5,7 @@
     "blog": "Blog",
     "projects": "Projeler",
     "bookmarks": "Yer İmleri",
+    "experience": "Deneyim",
     "menu": "Menü",
     "search": "Ara",
     "searchPlaceholder": "Ara..."
@@ -25,6 +26,78 @@
     "title": "Hakkımda",
     "p1": "Hızlı ve kullanıcıların sevdiği web & mobil deneyimler geliştiriyorum.",
     "p2": "Ex-Microsoft • MotoFamily kurucusu • React/TypeScript tutkunu."
+  },
+  "experience": {
+    "sectionLabel": "Deneyim",
+    "sectionTitle": "Çalıştığım Yerler",
+    "telescope": {
+      "dateRange": "2023 — 2024",
+      "title": "Frontend Takım Lideri Mühendis",
+      "company": "Tork Software (Telescope Labs Vendor)",
+      "descriptions": [
+        "Performans ve kullanıcı deneyimi iyileştirmelerine odaklanarak frontend çözümleri geliştirip optimize ettim.",
+        "Gerçek zamanlı veri analitiği ve görselleştirme için yenilikçi çözümler sunmak üzere ürün ekipleriyle yakın çalıştım.",
+        "Highcharts kütüphanesi kullanarak yapay zeka tabanlı veri analizi ve grafik gösterimi.",
+        "Signal ile frontend'de asenkron istek yönetimi."
+      ]
+    },
+    "microsoft": {
+      "dateRange": "Ağu 2021 — Ağu 2023",
+      "title": "Frontend Mühendisi",
+      "company": "Tork Software (Microsoft Vendor)",
+      "location": "Antalya, Türkiye",
+      "descriptions": [
+        "Microsoft News platformları için (Edge, Windows 10 görev çubuğu, Windows 11 widget'ları, msn.com vb.) topluluk ile ilgili tüm UI bileşenlerini sıfırdan geliştirdim; yorum yapma, kullanıcı/yayıncı profilleri, bahşiş, abonelik ve kişiselleştirilmiş bildirimler dahil.",
+        "Bu deneyimler şu anda 53 pazarda ve aylık 1 milyar benzersiz aktif kullanıcıya ulaşıyor.",
+        "Geliştirdiğim projeler:",
+        "Microsoft Tools AEC UI",
+        "Microsoft Views UI",
+        "Microsoft Community UI (Responsible for the development)",
+        "Microsoft Beacon UI",
+        "Microsoft Flyout UI",
+        "Platformlar arası tutarlı ve güvenilir performans sağlamak için Visual Parity Test ve Unit Test geliştirmesi yaptım."
+      ]
+    },
+    "kod": {
+      "dateRange": "2019 — 2021",
+      "title": "Full Stack Geliştirici & Mobil Geliştirici",
+      "company": "Kod Yazılım LTD ŞTİ",
+      "descriptions": [
+        "Web, B2B, B2C",
+        "Web CRM ve Mobil CRM geliştirme",
+        "Web ve Mobil POS geliştirme",
+        "Web ve Mobil Inventory management geliştirme",
+        "Web ve Mobil Reporting geliştirme",
+        "Web ve Mobil Inventory management geliştirme",
+        "Web ve Mobil Inventory management geliştirme",
+        "Türkiye'deki otellerde yaygın olarak kullanılan gelişmiş B2C ve B2B mobil uygulamaların geliştirilmesine liderlik ettim.",
+        "iOS ve Android platformları için karmaşık build ve yayınlama sorunlarını çözmede uzmanlaştım."
+      ]
+    },
+    "phoenix": {
+      "dateRange": "2018 — 2019",
+      "title": "Orta Düzey Yazılım Mühendisi (Frontend Geliştirici)",
+      "company": "Phoenix Secondment",
+      "descriptions": [
+        "Modern JavaScript framework'leri kullanarak performans optimizasyonları ve özellik geliştirmelerine odaklanan web uygulamaları geliştirdim."
+      ]
+    },
+    "eveara": {
+      "dateRange": "2018",
+      "title": "Orta Düzey Yazılım Mühendisi (Frontend Geliştirici)",
+      "company": "EVEARA",
+      "descriptions": [
+        "Çeşitli frontend projelerinde çalışarak genel kod kalitesine ve ürün tasarımına katkıda bulundum."
+      ]
+    },
+    "medyat": {
+      "dateRange": "2016 — 2017",
+      "title": "Junior - Orta Düzey Yazılım Mühendisi (Full Stack Geliştirici)",
+      "company": "Medya-T Yazılım",
+      "descriptions": [
+        "Başlangıçtan dağıtıma kadar çeşitli projelerde çalışarak full stack geliştirme konusunda temel deneyim kazandım."
+      ]
+    }
   },
   "blog": { "title": "Blog", "empty": "Henüz içerik yok." },
   "projects": { "title": "Projeler", "description": "Çok yakında..." },

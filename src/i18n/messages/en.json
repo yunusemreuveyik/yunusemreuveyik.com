@@ -1,10 +1,11 @@
 {
-  "nav": { 
-    "home": "Home", 
-    "about": "About", 
+  "nav": {
+    "home": "Home",
+    "about": "About",
     "blog": "Blog",
     "projects": "Projects",
     "bookmarks": "Bookmarks",
+    "experience": "Experience",
     "menu": "Menu",
     "search": "Search",
     "searchPlaceholder": "Search..."
@@ -25,6 +26,81 @@
     "title": "About",
     "p1": "I build fast, user-loving apps and mobile experiences.",
     "p2": "Ex-Microsoft • MotoFamily founder • React/TypeScript enjoyer."
+  },
+  "experience": {
+    "sectionLabel": "Experience",
+    "sectionTitle": "Where I've Worked",
+    "telescope": {
+      "dateRange": "2023 — 2024",
+      "title": "Frontend Team Lead Engineer",
+      "company": "Tork Software (Telescope Labs Vendor)",
+      "descriptions": [
+        "Frontend Team Lead",
+        "Async request handling on frontend with Signal.",
+        "GPT Integration for data analysis and visualization.",
+        "Highcharts library for AI based data analysis and visualization.",
+        "Using signal for async request handling on frontend.",
+        "Develop and optimize frontend solutions, focusing on performance and user experience improvements.",
+        "Work closely with product teams to deliver innovative solutions for real-time data analytics and visualization."
+      ]
+    },
+    "microsoft": {
+      "dateRange": "Aug 2021 — Aug 2023",
+      "title": "Frontend Engineer",
+      "company": "Tork Software (Microsoft Vendor)",
+      "location": "Antalya, Türkiye",
+      "descriptions": [
+        "Building all community related UI components from zero for Microsoft News canvases (Edge, Windows 10 taskbar, Windows 11 widgets, msn.com etc.), including commenting, user/publisher profiles, tipping, subscription, and personalized notifications.",
+        "These experiences are now reaching across 53 markets and 1 billion monthly unique active users.",
+        "Led the development of:",
+        "Microsoft Tools AEC UI",
+        "Microsoft Views UI",
+        "Microsoft Community UI (Responsible for the development)",
+        "Microsoft Beacon UI",
+        "Microsoft Flyout UI",
+        "Conducted Visual Parity Test development and Unit Test development, ensuring consistent and reliable performance across platforms."
+      ]
+    },
+    "kod": {
+      "dateRange": "2019 — 2021",
+      "title": "Full Stack Developer & Mobile Developer",
+      "company": "Kod Yazılım LTD ŞTİ",
+      "descriptions": [
+        "Web, B2B, B2C",
+        "Web CRM and Mobile CRM development",
+        "Web and Mobile POS development",
+        "Web and Mobile Inventory management development",
+        "Web and Mobile Reporting development",
+        "Web and Mobile Inventory management development",
+        "Web and Mobile Inventory management development",
+        "Led the development of advanced B2C and B2B mobile applications, now widely used across hotels in Turkey.",
+        "Specialized in solving complex build and publish issues for iOS and Android platforms."
+      ]
+    },
+    "phoenix": {
+      "dateRange": "2018 — 2019",
+      "title": "Middle Software Engineer (Frontend Developer)",
+      "company": "Phoenix Secondment",
+      "descriptions": [
+        "Developed web applications focusing on performance optimizations and feature enhancements using modern JavaScript frameworks."
+      ]
+    },
+    "eveara": {
+      "dateRange": "2018",
+      "title": "Middle Software Engineer (Frontend Developer)",
+      "company": "EVEARA",
+      "descriptions": [
+        "Worked on a variety of frontend projects, contributing to the overall code quality and product design."
+      ]
+    },
+    "medyat": {
+      "dateRange": "2016 — 2017",
+      "title": "Junior - Middle Software Engineer (Full Stack Developer)",
+      "company": "Medya-T Yazılım",
+      "descriptions": [
+        "Gained foundational experience in full stack development, working on diverse projects from inception to deployment."
+      ]
+    }
   },
   "blog": { "title": "Blog", "empty": "No posts yet." },
   "projects": { "title": "Projects", "description": "Coming soon..." },

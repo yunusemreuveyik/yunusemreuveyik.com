@@ -2,6 +2,7 @@ import "../../app/globals.css";
 import Providers from "@/components/providers";
 import { notFound } from "next/navigation";
 import Header from "@/components/header";
+import MouseGlow from "@/components/mouse-glow";
 import { locales } from "../../i18n/routing";
 
 // ✅ DO NOT force-static; either delete the export or keep force-dynamic
@@ -38,6 +39,7 @@ export default async function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased">
         <Providers locale={locale} messages={messages}>
+          <MouseGlow />
           <Header />
           <main className="container mx-auto max-w-4xl px-6 pt-20">
             {children}
