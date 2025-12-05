@@ -227,7 +227,6 @@ export default function MyExperiences() {
               <div className="text-xs uppercase tracking-wider text-neutral-500 dark:text-neutral-500 pt-1">
                 {t(`${exp.id}.dateRange`)}
               </div>
-
               {/* Content */}
               <div className="space-y-4">
                 {/* Title & Company */}
@@ -295,12 +294,19 @@ export default function MyExperiences() {
                 {/* Description */}
                 <ul className="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                   {descriptions.map((desc: string, idx: number) => (
-                    <li key={idx} className="flex gap-2">
+                    <motion.li
+                      key={idx}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: idx * 0.1 }}
+                      className="flex gap-2"
+                    >
                       <span className="text-violet-500 dark:text-violet-400 shrink-0">
                         ~&gt;
                       </span>
                       <span>{desc}</span>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
 
