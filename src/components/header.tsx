@@ -233,7 +233,7 @@ export default function Header() {
 
                 {/* Footer actions */}
                 <div className="px-4 pb-6 flex items-center justify-center gap-4 border-t border-neutral-200 dark:border-neutral-800 pt-4">
-                  <LocaleSwitcher />
+                  <LocaleSwitcher position="top" />
                   <ThemeToggle />
                 </div>
               </div>

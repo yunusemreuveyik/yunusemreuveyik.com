@@ -9,7 +9,13 @@ import { AnimatePresence, motion } from "framer-motion";
 const localeNames: Record<string, string> = { en: "English", tr: "Türkçe" };
 const localeFlags: Record<string, string> = { en: "🇺🇸", tr: "🇹🇷" };
 
-export default function LocaleSwitcher() {
+interface LocaleSwitcherProps {
+  position?: "top" | "bottom";
+}
+
+export default function LocaleSwitcher({
+  position = "bottom",
+}: LocaleSwitcherProps) {
   const pathname = usePathname();
   const router = useRouter();
   const currentLocale = useLocale();
@@ -30,6 +36,8 @@ export default function LocaleSwitcher() {
     setOpen(false);
   };
 
+  const isTop = position === "top";
+
   return (
     <div className="relative" ref={ref}>
       <button
@@ -43,11 +51,15 @@ export default function LocaleSwitcher() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -8, scale: 0.96 }}
+            initial={{ opacity: 0, y: isTop ? 8 : -8, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -8, scale: 0.96 }}
+            exit={{ opacity: 0, y: isTop ? 8 : -8, scale: 0.96 }}
             transition={{ duration: 0.15 }}
-            className="absolute right-0 top-full mt-2 min-w-[140px] py-1.5 bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 shadow-lg z-50"
+            className={`absolute min-w-[140px] py-1.5 bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 shadow-lg z-50 ${
+              isTop
+                ? "bottom-full mb-2 left-1/2 -translate-x-1/2"
+                : "right-0 top-full mt-2"
+            }`}
           >
             {locales.map((l) => (
               <button
