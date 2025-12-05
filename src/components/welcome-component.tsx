@@ -7,17 +7,10 @@ import GradientText from "@/components/gradient-text";
 import TechSlider from "@/components/tech-slider";
 import Badge, { MicrosoftIcon } from "@/components/badge";
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.08, delayChildren: 0.2 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+// Lighter animation that doesn't hide content initially
+const fadeIn = {
+  hidden: { opacity: 0.7, y: 10 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
 export default function WelcomeComponent() {
@@ -25,22 +18,19 @@ export default function WelcomeComponent() {
 
   return (
     <section className="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center text-center overflow-hidden">
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="space-y-8 w-full"
-      >
+      <div className="space-y-8 w-full">
         {/* Welcome text */}
         <motion.p
-          variants={item}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
           className="text-xs sm:text-sm uppercase tracking-[0.3em] text-neutral-500 dark:text-neutral-500"
         >
           {t("welcome")}
         </motion.p>
 
-        {/* Name with code brackets */}
-        <motion.div variants={item} className="space-y-4">
+        {/* Name with code brackets - LCP element, no animation delay */}
+        <div className="space-y-4">
           <h1 className="flex items-center justify-center gap-1.5 sm:gap-3 flex-nowrap overflow-visible leading-tight py-2">
             {/* Opening bracket */}
             <span className="text-2xl sm:text-5xl md:text-6xl font-light text-neutral-400 dark:text-neutral-600 select-none">
@@ -68,27 +58,37 @@ export default function WelcomeComponent() {
           </p>
 
           {/* Ex-Microsoft badge */}
-          <div className="flex justify-center pt-3">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+            className="flex justify-center pt-3"
+          >
             <Badge icon={<MicrosoftIcon />}>Ex-Microsoft</Badge>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* Scroll hint text */}
         <motion.p
-          variants={item}
+          variants={fadeIn}
+          initial="hidden"
+          animate="show"
+          transition={{ delay: 0.15 }}
           className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-600 max-w-md mx-auto"
         >
           {t("scrollHint")}
         </motion.p>
 
         {/* Tech Stack - Infinite Scroll */}
-        <motion.div variants={item} className="pt-6">
+        <div className="pt-6">
           <TechSlider />
-        </motion.div>
+        </div>
 
         {/* CTA Buttons */}
         <motion.div
-          variants={item}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="flex justify-center gap-3 sm:gap-4 pt-10 flex-wrap"
         >
           <a
@@ -119,16 +119,15 @@ export default function WelcomeComponent() {
         </motion.div>
 
         {/* Scroll indicator */}
-        <motion.div variants={item} className="pt-12">
+        <div className="pt-12">
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
             <ChevronDown className="w-5 h-5 text-neutral-400 dark:text-neutral-600 mx-auto" />
           </motion.div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 }
-

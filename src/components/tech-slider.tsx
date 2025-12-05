@@ -93,31 +93,8 @@ const techStack = [
 ];
 
 export default function TechSlider() {
-  // Create 4 copies for truly seamless infinite scroll
-  const items = [
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-    ...techStack,
-  ];
+  // 2 copies is enough for seamless infinite scroll
+  const items = [...techStack, ...techStack];
 
   return (
     <div className="w-full overflow-hidden">
