@@ -6,6 +6,7 @@
     "projects": "Projects",
     "bookmarks": "Bookmarks",
     "experience": "Experience",
+    "references": "References",
     "menu": "Menu",
     "search": "Search",
     "searchPlaceholder": "Search..."
@@ -17,7 +18,8 @@
     "role": "Senior Frontend Engineer",
     "subtitle": "8+ years crafting scalable web & mobile experiences",
     "description": "Ex-Microsoft contractor reaching 1B+ users • React, TypeScript & React Native specialist",
-    "scrollHint": "Scroll down to explore my skills & experience",
+    "exploreExperience": "View Experience",
+    "exploreReferences": "View References",
     "mailMe": "Mail Me",
     "linkedin": "LinkedIn",
     "github": "GitHub"
@@ -100,6 +102,37 @@
       "descriptions": [
         "Gained foundational experience in full stack development, working on diverse projects from inception to deployment."
       ]
+    }
+  },
+  "references": {
+    "sectionLabel": "References",
+    "sectionTitle": "What People Say",
+    "roleAt": "at",
+    "testimonials": {
+      "fatma": {
+        "quote": "A Teammate Everyone Wants",
+        "description": "We work with the same team. Working with him on the same project is reassuring and wonderful. He is helpful, hardworking and has very strong communication. He is a teammate that everyone would want to work with. I wish him continued success. I hope everyone will have a teammate like him one day."
+      },
+      "oguzhan": {
+        "quote": "Exceptional Frontend Talent",
+        "description": "As the Head of Software Department, I had the opportunity to work closely with Yunus as our Frontend Developer. His mastery of modern frontend technologies and attention to UI/UX details consistently impressed both the team and our clients. Yunus has a unique ability to transform complex requirements into elegant, performant interfaces. His growth during his time with us was remarkable, and I have no doubt he will continue to excel in his career."
+      },
+      "isfendiyar": {
+        "quote": "The Best Frontend Partner",
+        "description": "Working alongside Yunus as the backend developer while he handled the frontend was an absolute joy. Our frontend-backend collaboration was seamless - he always understood the API requirements instantly and delivered pixel-perfect implementations. Beyond his technical skills, Yunus is genuinely a great person to work with. Coffee breaks, debugging sessions, and late-night deployments were always better with him around. Miss those days, brother!"
+      },
+      "mehmet": {
+        "quote": "A Great Addition From Day One",
+        "description": "I was the first person Yunus spoke with when he joined Kod Yazılım, and from that very first conversation, I knew we had found someone special. His enthusiasm, professionalism, and eagerness to contribute were evident right away. Throughout his time with us, Yunus proved that first impression right - he became a key member of our development team and earned the respect of everyone in the company. It was a pleasure to have him on board."
+      },
+      "sarah": {
+        "quote": "Highly Recommended",
+        "description": "Professional, skilled, and always delivers on time. Yunus's work on our e-commerce platform exceeded all our expectations. Would definitely work with him again."
+      },
+      "david": {
+        "quote": "Creative and Technical Excellence",
+        "description": "Rare combination of technical skills and creative vision. Yunus brought our design mockups to life with pixel-perfect precision and smooth animations."
+      }
     }
   },
   "blog": { "title": "Blog", "empty": "No posts yet." },

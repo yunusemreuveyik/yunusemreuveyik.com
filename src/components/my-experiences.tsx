@@ -190,8 +190,7 @@ export default function MyExperiences() {
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="mb-16"
       >
@@ -207,8 +206,7 @@ export default function MyExperiences() {
       <motion.div
         variants={container}
         initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
+        animate="show"
         className="space-y-8"
       >
         {experienceConfigs.map((exp) => {
@@ -297,8 +295,7 @@ export default function MyExperiences() {
                     <motion.li
                       key={idx}
                       initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
+                      animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.4, delay: idx * 0.1 }}
                       className="flex gap-2"
                     >

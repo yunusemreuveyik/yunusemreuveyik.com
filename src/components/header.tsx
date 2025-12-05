@@ -4,7 +4,7 @@ import ThemeToggle from "./theme-toggle";
 import LocaleSwitcher from "./locale-switcher";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "../i18n/routing";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Menu,
@@ -14,22 +14,23 @@ import {
   FolderKanban,
   User,
   Briefcase,
+  MessageSquareQuote,
 } from "lucide-react";
 import GradientText from "./gradient-text";
 
 const navItems = [
   { href: "/", key: "home", icon: Home },
-  { href: "/#experience", key: "experience", icon: Briefcase, isSection: true },
-  { href: "/blog", key: "blog", icon: FileText },
+  { href: "/experience", key: "experience", icon: Briefcase },
+  { href: "/references", key: "references", icon: MessageSquareQuote },
+  /* { href: "/blog", key: "blog", icon: FileText },
   { href: "/projects", key: "projects", icon: FolderKanban },
-  { href: "/about", key: "about", icon: User },
+  { href: "/about", key: "about", icon: User }, */
 ] as const;
 
 export default function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [experienceInView, setExperienceInView] = useState(false);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -48,55 +49,8 @@ export default function Header() {
     };
   }, [mobileMenuOpen]);
 
-  // Track experience section visibility using scroll position
-  useEffect(() => {
-    if (pathname !== "/") {
-      setExperienceInView(false);
-      return;
-    }
-
-    const checkExperienceInView = () => {
-      const section = document.getElementById("experience");
-      if (!section) return;
-
-      const rect = section.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-
-      // Section is "in view" when its top is in the upper 60% of viewport
-      // and its bottom hasn't scrolled past the top
-      const isInView = rect.top < viewportHeight * 0.6 && rect.bottom > 100;
-      setExperienceInView(isInView);
-    };
-
-    // Check on mount and scroll
-    checkExperienceInView();
-    window.addEventListener("scroll", checkExperienceInView, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", checkExperienceInView);
-    };
-  }, [pathname]);
-
-  const handleSectionClick = useCallback(
-    (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-      // If already on home page, scroll to section
-      if (pathname === "/") {
-        e.preventDefault();
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-      // If not on home page, let the Link navigate to /#experience
-    },
-    [pathname]
-  );
-
-  const isActive = (href: string, isSection?: boolean) => {
-    if (isSection && href === "/#experience") {
-      return pathname === "/" && experienceInView;
-    }
-    if (href === "/") return pathname === "/" && !experienceInView;
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
 
@@ -122,13 +76,8 @@ export default function Header() {
                 <Link
                   key={item.key}
                   href={item.href}
-                  onClick={
-                    item.isSection
-                      ? (e) => handleSectionClick(e, "experience")
-                      : undefined
-                  }
                   className={`text-sm transition-colors ${
-                    isActive(item.href, item.isSection)
+                    isActive(item.href)
                       ? "text-neutral-900 dark:text-white"
                       : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
                   }`}
@@ -211,14 +160,9 @@ export default function Header() {
                       >
                         <Link
                           href={item.href}
-                          onClick={(e) => {
-                            if (item.isSection) {
-                              handleSectionClick(e, "experience");
-                            }
-                            setMobileMenuOpen(false);
-                          }}
+                          onClick={() => setMobileMenuOpen(false)}
                           className={`flex items-center gap-3 px-4 py-3.5 rounded-xl transition-colors ${
-                            isActive(item.href, item.isSection)
+                            isActive(item.href)
                               ? "bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white font-medium"
                               : "text-neutral-500 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
                           }`}

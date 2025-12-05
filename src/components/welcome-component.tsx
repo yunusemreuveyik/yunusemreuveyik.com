@@ -2,7 +2,14 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ChevronDown, Mail, Github, Linkedin } from "lucide-react";
+import {
+  Mail,
+  Github,
+  Linkedin,
+  Briefcase,
+  MessageSquareQuote,
+} from "lucide-react";
+import { Link } from "@/i18n/routing";
 import GradientText from "@/components/gradient-text";
 import TechSlider from "@/components/tech-slider";
 import Badge, { MicrosoftIcon } from "@/components/badge";
@@ -73,13 +80,24 @@ export default function WelcomeComponent() {
           </div>
         </motion.div>
 
-        {/* Scroll hint text */}
-        <motion.p
-          variants={item}
-          className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-600 max-w-md mx-auto"
-        >
-          {t("scrollHint")}
-        </motion.p>
+        {/* Explore links */}
+        <motion.div variants={item} className="flex justify-center gap-4 pt-2">
+          <Link
+            href="/experience"
+            className="inline-flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+          >
+            <Briefcase className="w-4 h-4" />
+            {t("exploreExperience")}
+          </Link>
+          <span className="text-neutral-300 dark:text-neutral-700">|</span>
+          <Link
+            href="/references"
+            className="inline-flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+          >
+            <MessageSquareQuote className="w-4 h-4" />
+            {t("exploreReferences")}
+          </Link>
+        </motion.div>
 
         {/* Tech Stack - Infinite Scroll */}
         <motion.div variants={item} className="pt-6">
@@ -116,16 +134,6 @@ export default function WelcomeComponent() {
             <Mail className="w-4 h-4" />
             {t("mailMe")}
           </a>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div variants={item} className="pt-12">
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <ChevronDown className="w-5 h-5 text-neutral-400 dark:text-neutral-600 mx-auto" />
-          </motion.div>
         </motion.div>
       </motion.div>
     </section>
