@@ -108,30 +108,97 @@
     "sectionLabel": "References",
     "sectionTitle": "What People Say",
     "roleAt": "at",
+    "filters": {
+      "all": "All",
+      "microsoft": "Microsoft",
+      "telescope": "Telescope Labs",
+      "kod": "Kod Yazılım",
+      "medyat": "Medya-T"
+    },
     "testimonials": {
+      "johannes": {
+        "quote": "Reliable, Patient, Solution-Oriented",
+        "description": "It was a real pleasure working with Yunus during our time at Microsoft MSN / News. He brought a friendly, steady energy to every project, even when we were dealing with fires behind the scenes. I always appreciated how patient and solution-oriented he was. You could rely on him to stay calm, cut through the noise, and get us moving again. We tackled plenty of technical challenges together, including building new experiences like tipping and subscriptions. Yunus consistently found fast, effective ways to solve complex problems at scale for millions of users across many international markets. I'm grateful for the time we worked together and would happily collaborate with him again."
+      },
+      "riza": {
+        "quote": "Exceeded Every Expectation",
+        "description": "As Yunus's team leader at Microsoft, I watched him grow into an exceptional frontend developer. His eagerness to learn and ability to quickly grasp complex concepts was remarkable. He brought both technical excellence and a positive attitude to our team."
+      },
+      "alp": {
+        "quote": "Outstanding Technical Skills",
+        "description": "At Microsoft, Yunus stood out as one of the most dedicated frontend developers I've worked with. His collaborative spirit elevates everyone around him. He takes ownership, communicates effectively, and brings creative solutions to every challenge."
+      },
+      "edgar": {
+        "quote": "Excellent Collaboration",
+        "description": "As a PM working with Yunus at Microsoft, I was impressed by his ability to deliver complex frontend features efficiently. He understood product requirements quickly and always found practical solutions. A pleasure to work with."
+      },
+      "mert": {
+        "quote": "Understands Product Deeply",
+        "description": "As a PM at Microsoft, I was impressed by Yunus's ability to bridge product vision and technical implementation. He understood the 'why' behind every feature and often suggested UX improvements. A rare combination of technical excellence and product thinking."
+      },
+      "asli": {
+        "quote": "Great Teammate and Developer",
+        "description": "Working alongside Yunus on the same projects at Microsoft was a great experience. His frontend skills are top-notch, and he's always willing to help and share knowledge. A reliable teammate who delivers quality work consistently."
+      },
+      "mustafa": {
+        "quote": "Skilled and Collaborative",
+        "description": "Yunus and I worked together on MSN News & Feeds editorial tools. His frontend expertise and collaborative approach made our projects run smoothly. Always professional and delivers great results."
+      },
+      "mertuysal": {
+        "quote": "Reliable and Talented",
+        "description": "Working with Yunus at Microsoft was a great experience. His frontend skills and problem-solving abilities are impressive. A dependable teammate who always delivers quality work."
+      },
+      "huseyin": {
+        "quote": "Great to Work With",
+        "description": "Yunus and I worked together at Microsoft on various projects. His frontend expertise and attention to detail made our collaboration smooth. A reliable colleague who brings positive energy to the team."
+      },
+      "tugce": {
+        "quote": "Supportive and Knowledgeable",
+        "description": "Working with Yunus at Microsoft on Msn.com was a great learning experience. He was always helpful with frontend challenges and shared his knowledge generously. A supportive colleague who makes the team better."
+      },
+      "mustafagur": {
+        "quote": "Skilled and Professional",
+        "description": "Yunus and I worked together at Microsoft. His frontend skills and professional approach to problem-solving were impressive. A great colleague who consistently delivers high-quality work."
+      },
+      "tahir": {
+        "quote": "Perfect Design-to-Code Partner",
+        "description": "Working with Yunus at Telescope Labs was seamless. As the Figma designer, I appreciated how perfectly he translated my designs into pixel-perfect implementations. His frontend leadership and attention to detail made our collaboration exceptional."
+      },
+      "tarik": {
+        "quote": "Great Frontend-Backend Synergy",
+        "description": "As a backend engineer at Telescope Labs, working with Yunus as frontend team lead was excellent. He understood API structures quickly and our collaboration was always smooth. A skilled leader who delivers quality work."
+      },
       "fatma": {
         "quote": "A Teammate Everyone Wants",
         "description": "We work with the same team. Working with him on the same project is reassuring and wonderful. He is helpful, hardworking and has very strong communication. He is a teammate that everyone would want to work with. I wish him continued success. I hope everyone will have a teammate like him one day."
       },
       "oguzhan": {
         "quote": "Exceptional Frontend Talent",
-        "description": "As the Head of Software Department, I had the opportunity to work closely with Yunus as our Frontend Developer. His mastery of modern frontend technologies and attention to UI/UX details consistently impressed both the team and our clients. Yunus has a unique ability to transform complex requirements into elegant, performant interfaces. His growth during his time with us was remarkable, and I have no doubt he will continue to excel in his career."
+        "description": "As Head of Software Department, Yunus impressed us with his mastery of modern frontend technologies. He transforms complex requirements into elegant, performant interfaces. His growth was remarkable."
       },
       "isfendiyar": {
-        "quote": "The Best Frontend Partner",
-        "description": "Working alongside Yunus as the backend developer while he handled the frontend was an absolute joy. Our frontend-backend collaboration was seamless - he always understood the API requirements instantly and delivered pixel-perfect implementations. Beyond his technical skills, Yunus is genuinely a great person to work with. Coffee breaks, debugging sessions, and late-night deployments were always better with him around. Miss those days, brother!"
+        "quote": "Best Frontend Partner",
+        "description": "Our frontend-backend collaboration was seamless. He understood API requirements instantly and delivered pixel-perfect implementations. A great person to work with. Miss those days, brother!"
       },
       "mehmet": {
-        "quote": "A Great Addition From Day One",
-        "description": "I was the first person Yunus spoke with when he joined Kod Yazılım, and from that very first conversation, I knew we had found someone special. His enthusiasm, professionalism, and eagerness to contribute were evident right away. Throughout his time with us, Yunus proved that first impression right - he became a key member of our development team and earned the respect of everyone in the company. It was a pleasure to have him on board."
+        "quote": "Great From Day One",
+        "description": "From our first conversation, I knew Yunus was special. His enthusiasm and professionalism were evident immediately. He became a key member of our team and earned everyone's respect."
+      },
+      "murat": {
+        "quote": "Full Stack Excellence",
+        "description": "Yunus and I worked together as full stack engineers at Medya-T. His ability to handle both frontend and backend was impressive. A hardworking and talented developer."
+      },
+      "tasar": {
+        "quote": "Eager Learner, Quick Growth",
+        "description": "As CEO of Medya-T, I had the pleasure of introducing Yunus to real-world software development. His eagerness to learn and quick adaptation to professional practices was remarkable. A promising talent from day one."
       },
       "sarah": {
         "quote": "Highly Recommended",
-        "description": "Professional, skilled, and always delivers on time. Yunus's work on our e-commerce platform exceeded all our expectations. Would definitely work with him again."
+        "description": "Professional, skilled, and always delivers on time. Exceeded all our expectations."
       },
       "david": {
-        "quote": "Creative and Technical Excellence",
-        "description": "Rare combination of technical skills and creative vision. Yunus brought our design mockups to life with pixel-perfect precision and smooth animations."
+        "quote": "Creative Excellence",
+        "description": "Rare combination of technical skills and creative vision. Pixel-perfect precision and smooth animations."
       }
     }
   },

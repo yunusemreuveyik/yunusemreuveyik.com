@@ -14,7 +14,7 @@ export default function GradientText({
       className={`relative ${className}`}
       style={{
         background:
-          "linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #000000 100%)",
+          "linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, rgb(33 20 51) 100%)",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
         backgroundClip: "text",

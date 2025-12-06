@@ -105,30 +105,97 @@
     "sectionLabel": "Referanslar",
     "sectionTitle": "İnsanlar Ne Diyor",
     "roleAt": "-",
+    "filters": {
+      "all": "Tümü",
+      "microsoft": "Microsoft",
+      "telescope": "Telescope Labs",
+      "kod": "Kod Yazılım",
+      "medyat": "Medya-T"
+    },
     "testimonials": {
+      "johannes": {
+        "quote": "Güvenilir, Sabırlı, Çözüm Odaklı",
+        "description": "Microsoft MSN / News'te birlikte çalıştığımız süre boyunca Yunus ile çalışmak gerçek bir zevkti. Perde arkasında yangınlarla uğraşırken bile her projeye samimi ve istikrarlı bir enerji getirdi. Ne kadar sabırlı ve çözüm odaklı olduğunu her zaman takdir ettim. Sakin kalması, gürültüyü kesip atmesi ve bizi tekrar harekete geçirmesi konusunda ona güvenebilirdiniz. Birlikte birçok teknik zorlukla mücadele ettik, bahşiş ve abonelik gibi yeni deneyimler oluşturduk. Yunus, birçok uluslararası pazarda milyonlarca kullanıcı için ölçeklenebilir karmaşık sorunları çözmenin hızlı ve etkili yollarını sürekli olarak buldu. Birlikte çalıştığımız zaman için minnettarım ve onunla tekrar işbirliği yapmaktan mutluluk duyarım."
+      },
+      "riza": {
+        "quote": "Tüm Beklentileri Aştı",
+        "description": "Microsoft'ta Yunus'un takım lideri olarak, onun olağanüstü bir frontend geliştiriciye dönüşümünü izledim. Öğrenme isteği ve karmaşık kavramları hızla kavrama yeteneği dikkat çekiciydi. Ekibimize hem teknik mükemmellik hem de pozitif bir tutum getirdi."
+      },
+      "alp": {
+        "quote": "Olağanüstü Teknik Beceriler",
+        "description": "Microsoft'ta Yunus, birlikte çalıştığım en özverili frontend geliştiricilerden biriydi. İşbirlikçi ruhu etrafındaki herkesi yükseltiyor. İşinin sorumluluğunu alıyor, etkili iletişim kuruyor ve her zorluğa yaratıcı çözümler getiriyor."
+      },
+      "edgar": {
+        "quote": "Mükemmel İşbirliği",
+        "description": "Microsoft'ta Yunus ile PM olarak çalışırken, karmaşık frontend özelliklerini verimli bir şekilde sunma yeteneği beni etkiledi. Ürün gereksinimlerini hızla anlıyor ve her zaman pratik çözümler buluyordu. Birlikte çalışmak bir zevkti."
+      },
+      "mert": {
+        "quote": "Ürünü Derinlemesine Anlıyor",
+        "description": "Microsoft'ta PM olarak, Yunus'un ürün vizyonu ile teknik uygulama arasındaki boşluğu kapatma yeteneği beni etkiledi. Her özelliğin arkasındaki 'neden'i anlıyor ve UX iyileştirmeleri öneriyordu. Nadir bir teknik ve ürün düşüncesi kombinasyonu."
+      },
+      "asli": {
+        "quote": "Harika Takım Arkadaşı ve Geliştirici",
+        "description": "Microsoft'ta aynı projelerde Yunus ile birlikte çalışmak harika bir deneyimdi. Frontend becerileri birinci sınıf ve her zaman yardım etmeye ve bilgi paylaşmaya istekli. Sürekli kaliteli iş üreten güvenilir bir takım arkadaşı."
+      },
+      "mustafa": {
+        "quote": "Yetenekli ve İşbirlikçi",
+        "description": "Yunus ile MSN News & Feeds editoryal araçları üzerinde birlikte çalıştık. Frontend uzmanlığı ve işbirlikçi yaklaşımı projelerimizin sorunsuz ilerlemesini sağladı. Her zaman profesyonel ve harika sonuçlar üretiyor."
+      },
+      "mertuysal": {
+        "quote": "Güvenilir ve Yetenekli",
+        "description": "Microsoft'ta Yunus ile çalışmak harika bir deneyimdi. Frontend becerileri ve problem çözme yetenekleri etkileyici. Her zaman kaliteli iş üreten güvenilir bir takım arkadaşı."
+      },
+      "huseyin": {
+        "quote": "Birlikte Çalışması Harika",
+        "description": "Yunus ile Microsoft'ta çeşitli projelerde birlikte çalıştık. Frontend uzmanlığı ve detaylara gösterdiği özen işbirliğimizi sorunsuz hale getirdi. Takıma pozitif enerji katan güvenilir bir meslektaş."
+      },
+      "tugce": {
+        "quote": "Destekleyici ve Bilgili",
+        "description": "Microsoft'ta Msn.com üzerinde Yunus ile çalışmak harika bir öğrenme deneyimiydi. Frontend zorluklarında her zaman yardımcı oldu ve bilgisini cömertçe paylaştı. Takımı daha iyi yapan destekleyici bir meslektaş."
+      },
+      "mustafagur": {
+        "quote": "Yetenekli ve Profesyonel",
+        "description": "Yunus ile Microsoft'ta birlikte çalıştık. Frontend becerileri ve problem çözmeye profesyonel yaklaşımı etkileyiciydi. Sürekli yüksek kaliteli iş üreten harika bir meslektaş."
+      },
+      "tahir": {
+        "quote": "Mükemmel Tasarım-Kod Ortağı",
+        "description": "Telescope Labs'te Yunus ile çalışmak sorunsuzdu. Figma tasarımcısı olarak, tasarımlarımı piksel mükemmelliğinde uygulamalara dönüştürmesini takdir ettim. Frontend liderliği ve detaylara gösterdiği özen işbirliğimizi olağanüstü kıldı."
+      },
+      "tarik": {
+        "quote": "Harika Frontend-Backend Uyumu",
+        "description": "Telescope Labs'te backend mühendisi olarak, frontend takım lideri Yunus ile çalışmak mükemmeldi. API yapılarını hızla anlıyor ve işbirliğimiz her zaman sorunsuz oluyordu. Kaliteli iş üreten yetenekli bir lider."
+      },
       "fatma": {
         "quote": "Herkesin İstediği Takım Arkadaşı",
         "description": "Aynı ekipte çalışıyoruz. Onunla aynı projede çalışmak güven verici ve harika. Yardımsever, çalışkan ve çok güçlü bir iletişime sahip. Herkesin birlikte çalışmak isteyeceği bir takım arkadaşı. Başarılarının devamını diliyorum. Umarım herkes bir gün onun gibi bir takım arkadaşına sahip olur."
       },
       "oguzhan": {
         "quote": "Olağanüstü Frontend Yeteneği",
-        "description": "Yazılım Departmanı Başkanı olarak, Yunus ile Frontend Geliştirici olarak yakın çalışma fırsatı buldum. Modern frontend teknolojilerine hakimiyeti ve UI/UX detaylarına gösterdiği özen hem ekibi hem de müşterilerimizi sürekli etkiledi. Yunus, karmaşık gereksinimleri zarif ve performanslı arayüzlere dönüştürme konusunda benzersiz bir yeteneğe sahip. Bizimle geçirdiği sürede gösterdiği gelişim dikkat çekiciydi ve kariyerinde başarılı olmaya devam edeceğinden hiç şüphem yok."
+        "description": "Yazılım Departmanı Başkanı olarak, Yunus modern frontend teknolojilerine hakimiyetiyle bizi etkiledi. Karmaşık gereksinimleri zarif ve performanslı arayüzlere dönüştürüyor. Gösterdiği gelişim dikkat çekiciydi."
       },
       "isfendiyar": {
         "quote": "En İyi Frontend Partneri",
-        "description": "Backend geliştirici olarak Yunus frontend'i yönetirken onunla birlikte çalışmak gerçekten keyifliydi. Frontend-backend işbirliğimiz kusursuzdu - API gereksinimlerini her zaman anında anlıyor ve piksel mükemmelliğinde implementasyonlar sunuyordu. Teknik becerilerinin ötesinde, Yunus birlikte çalışılması gerçekten harika biri. Kahve molaları, debugging seansları ve gece geç saatlerdeki deployment'lar onunla her zaman daha iyiydi. O günleri özlüyorum, kardeşim!"
+        "description": "Frontend-backend işbirliğimiz kusursuzdu. API gereksinimlerini anında anlıyor ve piksel mükemmelliğinde implementasyonlar sunuyordu. Birlikte çalışılması harika biri. O günleri özlüyorum, kardeşim!"
       },
       "mehmet": {
-        "quote": "İlk Günden Harika Bir Eklenti",
-        "description": "Yunus Kod Yazılım'a katıldığında konuştuğu ilk kişi bendim ve o ilk sohbetten itibaren özel birini bulduğumuzu anladım. Coşkusu, profesyonelliği ve katkıda bulunma isteği hemen belliydi. Bizimle geçirdiği süre boyunca Yunus o ilk izlenimi doğruladı - geliştirme ekibimizin kilit bir üyesi oldu ve şirketteki herkesin saygısını kazandı. Onu aramızda görmek bir zevkti."
+        "quote": "İlk Günden Harika",
+        "description": "İlk sohbetimizden itibaren Yunus'un özel biri olduğunu anladım. Coşkusu ve profesyonelliği hemen belliydi. Ekibimizin kilit bir üyesi oldu ve herkesin saygısını kazandı."
+      },
+      "murat": {
+        "quote": "Full Stack Mükemmelliği",
+        "description": "Yunus ile Medya-T'de full stack mühendis olarak birlikte çalıştık. Hem frontend hem de backend'i yönetme yeteneği etkileyiciydi. Çalışkan ve yetenekli bir geliştirici."
+      },
+      "tasar": {
+        "quote": "Hevesli Öğrenci, Hızlı Gelişim",
+        "description": "Medya-T'nin CEO'su olarak, Yunus'u gerçek dünya yazılım geliştirmeyle tanıştırma fırsatım oldu. Öğrenme isteği ve profesyonel pratiklere hızlı adaptasyonu dikkat çekiciydi. İlk günden umut vaat eden bir yetenek."
       },
       "sarah": {
         "quote": "Kesinlikle Tavsiye Ederim",
-        "description": "Profesyonel, yetenekli ve her zaman zamanında teslim ediyor. Yunus'un e-ticaret platformumuzdaki çalışması tüm beklentilerimizi aştı. Kesinlikle tekrar birlikte çalışırım."
+        "description": "Profesyonel, yetenekli ve her zaman zamanında teslim ediyor. Tüm beklentilerimizi aştı."
       },
       "david": {
-        "quote": "Yaratıcı ve Teknik Mükemmellik",
-        "description": "Teknik beceriler ve yaratıcı vizyon arasında nadir görülen bir kombinasyon. Yunus, tasarım mockup'larımızı piksel mükemmelliğinde hassasiyet ve akıcı animasyonlarla hayata geçirdi."
+        "quote": "Yaratıcı Mükemmellik",
+        "description": "Teknik beceriler ve yaratıcı vizyon arasında nadir görülen bir kombinasyon. Piksel mükemmelliğinde hassasiyet ve akıcı animasyonlar."
       }
     }
   },
