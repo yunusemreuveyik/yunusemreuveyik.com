@@ -1,4 +1,9 @@
 import { useTranslations } from "next-intl";
+import { locales } from "@/i18n/routing";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export const metadata = { title: "About" };
 

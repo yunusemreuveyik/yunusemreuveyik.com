@@ -10,21 +10,17 @@ import {
   Menu,
   X,
   Home,
-  FileText,
-  FolderKanban,
-  User,
   Briefcase,
   MessageSquareQuote,
+  FolderKanban,
 } from "lucide-react";
 import GradientText from "./gradient-text";
 
 const navItems = [
   { href: "/", key: "home", icon: Home },
   { href: "/experience", key: "experience", icon: Briefcase },
-  { href: "/references", key: "references", icon: MessageSquareQuote },
-  /* { href: "/blog", key: "blog", icon: FileText },
   { href: "/projects", key: "projects", icon: FolderKanban },
-  { href: "/about", key: "about", icon: User }, */
+  { href: "/references", key: "references", icon: MessageSquareQuote },
 ] as const;
 
 export default function Header() {

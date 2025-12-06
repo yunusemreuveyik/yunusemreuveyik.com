@@ -2,9 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "blog": "Blog",
     "projects": "Projects",
-    "bookmarks": "Bookmarks",
     "experience": "Experience",
     "references": "References",
     "menu": "Menu",
@@ -129,8 +127,8 @@
         "description": "At Microsoft, Yunus stood out as one of the most dedicated frontend developers I've worked with. His collaborative spirit elevates everyone around him. He takes ownership, communicates effectively, and brings creative solutions to every challenge."
       },
       "edgar": {
-        "quote": "Excellent Collaboration",
-        "description": "As a PM working with Yunus at Microsoft, I was impressed by his ability to deliver complex frontend features efficiently. He understood product requirements quickly and always found practical solutions. A pleasure to work with."
+        "quote": "Excellent Job with Real Attention to Detail",
+        "description": "I had the chance to work with Yunus during a project at Microsoft, where he handled the front-end work for an automation system interface. He did an excellent job, bringing clarity, consistency, and real attention to detail. Collaborating with him was genuinely enjoyable — he was easy to work with, always in a good mood, and contributed a lot to the project's success. I'm happy to recommend him."
       },
       "mert": {
         "quote": "Understands Product Deeply",
@@ -202,7 +200,37 @@
       }
     }
   },
-  "blog": { "title": "Blog", "empty": "No posts yet." },
-  "projects": { "title": "Projects", "description": "Coming soon..." },
-  "bookmarks": { "title": "Bookmarks", "description": "Coming soon..." }
+  "projects": {
+    "sectionLabel": "Projects",
+    "sectionTitle": "What I've Built",
+    "moreComingSoon": "More projects coming soon...",
+    "motofamily": {
+      "status": "Live",
+      "role": "Founder & Developer",
+      "description": "A social network and events platform designed for motorcycle enthusiasts. Bringing riders together with discounts, live maps, maintenance tracking, and community features.",
+      "featuresTitle": "Key Features",
+      "features": {
+        "liveMap": "Live Map & Discovery",
+        "chat": "Real-time Messaging",
+        "discounts": "QR Discount System",
+        "maintenance": "Maintenance Tracker",
+        "photos": "Photo Sharing",
+        "raceCalendar": "Race Calendars",
+        "rewards": "Weekly Rewards"
+      },
+      "techTitle": "Tech Stack",
+      "stats": {
+        "platforms": "Platforms",
+        "downloads": "Downloads",
+        "launched": "Launched"
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Oops! The page you're looking for doesn't exist or has been moved.",
+    "comment": "// TODO: Find the right page",
+    "goHome": "Go Home",
+    "goBack": "Go Back"
+  }
 }

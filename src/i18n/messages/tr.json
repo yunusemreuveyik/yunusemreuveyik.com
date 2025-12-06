@@ -2,9 +2,7 @@
   "nav": {
     "home": "Ana Sayfa",
     "about": "Hakkımda",
-    "blog": "Blog",
     "projects": "Projeler",
-    "bookmarks": "Yer İmleri",
     "experience": "Deneyim",
     "references": "Referanslar",
     "menu": "Menü",
@@ -126,8 +124,8 @@
         "description": "Microsoft'ta Yunus, birlikte çalıştığım en özverili frontend geliştiricilerden biriydi. İşbirlikçi ruhu etrafındaki herkesi yükseltiyor. İşinin sorumluluğunu alıyor, etkili iletişim kuruyor ve her zorluğa yaratıcı çözümler getiriyor."
       },
       "edgar": {
-        "quote": "Mükemmel İşbirliği",
-        "description": "Microsoft'ta Yunus ile PM olarak çalışırken, karmaşık frontend özelliklerini verimli bir şekilde sunma yeteneği beni etkiledi. Ürün gereksinimlerini hızla anlıyor ve her zaman pratik çözümler buluyordu. Birlikte çalışmak bir zevkti."
+        "quote": "Detaylara Gerçek Dikkat ile Mükemmel İş",
+        "description": "Microsoft'ta bir otomasyon sistemi arayüzü için front-end çalışmasını yönettiği bir projede Yunus ile çalışma fırsatım oldu. Mükemmel bir iş çıkardı, netlik, tutarlılık ve gerçek bir detay dikkati getirdi. Onunla işbirliği yapmak gerçekten keyifliydi — çalışması kolay, her zaman iyi bir ruh hali içindeydi ve projenin başarısına çok katkıda bulundu. Onu memnuniyetle tavsiye ederim."
       },
       "mert": {
         "quote": "Ürünü Derinlemesine Anlıyor",
@@ -199,7 +197,37 @@
       }
     }
   },
-  "blog": { "title": "Blog", "empty": "Henüz içerik yok." },
-  "projects": { "title": "Projeler", "description": "Çok yakında..." },
-  "bookmarks": { "title": "Yer İmleri", "description": "Çok yakında..." }
+  "projects": {
+    "sectionLabel": "Projeler",
+    "sectionTitle": "Neler Geliştirdim",
+    "moreComingSoon": "Daha fazla proje çok yakında...",
+    "motofamily": {
+      "status": "Yayında",
+      "role": "Kurucu & Geliştirici",
+      "description": "Motorsiklet tutkunları için tasarlanmış bir sosyal ağ ve etkinlik platformu. Sürücüleri indirimler, canlı harita, bakım takibi ve topluluk özellikleriyle bir araya getiriyor.",
+      "featuresTitle": "Öne Çıkan Özellikler",
+      "features": {
+        "liveMap": "Canlı Harita & Keşif",
+        "chat": "Anlık Mesajlaşma",
+        "discounts": "QR İndirim Sistemi",
+        "maintenance": "Bakım Takibi",
+        "photos": "Fotoğraf Paylaşımı",
+        "raceCalendar": "Yarış Takvimleri",
+        "rewards": "Haftalık Ödüller"
+      },
+      "techTitle": "Kullanılan Teknolojiler",
+      "stats": {
+        "platforms": "Platformlar",
+        "downloads": "İndirme",
+        "launched": "Lansman"
+      }
+    }
+  },
+  "notFound": {
+    "title": "Sayfa Bulunamadı",
+    "description": "Hay aksi! Aradığınız sayfa mevcut değil veya taşınmış.",
+    "comment": "// TODO: Doğru sayfayı bul",
+    "goHome": "Ana Sayfa",
+    "goBack": "Geri Dön"
+  }
 }

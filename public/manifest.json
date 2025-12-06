@@ -1,0 +1,17 @@
+{
+  "name": "Yunus Emre Uveyik - Portfolio",
+  "short_name": "YE Uveyik",
+  "description": "Senior Frontend Developer specializing in React, Next.js, and TypeScript",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#8b5cf6",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+
