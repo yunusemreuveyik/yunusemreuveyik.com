@@ -82,19 +82,19 @@ export default function Projects() {
               {/* Logo, Title & Meta */}
               <div className="flex items-start gap-4 sm:gap-6">
                 {/* Logo */}
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 shrink-0 rounded-xl sm:rounded-2xl bg-neutral-100 dark:bg-neutral-800 p-2 sm:p-3 flex items-center justify-center ring-2 ring-neutral-200 dark:ring-neutral-700">
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 shrink-0 rounded-xl sm:rounded-2xl bg-neutral-100 dark:bg-neutral-800 p-2 sm:p-3 flex items-center justify-center">
                   <Image
                     src="/logos/motofamily/Png-02.png"
                     alt="MotoFamily Logo"
-                    width={80}
-                    height={80}
+                    width={100}
+                    height={100}
                     className="object-contain hidden dark:block w-full h-full"
                   />
                   <Image
                     src="/logos/motofamily/Png-01.png"
                     alt="MotoFamily Logo"
-                    width={80}
-                    height={80}
+                    width={100}
+                    height={100}
                     className="object-contain dark:hidden w-full h-full"
                   />
                 </div>

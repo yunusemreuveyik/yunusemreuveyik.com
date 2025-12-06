@@ -68,27 +68,29 @@ function TestimonialCard({
 
       {/* Company Logo */}
       {config.companyLogo && (
-        <div className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center opacity-60 group-hover:opacity-100 transition-opacity">
+        <div className="absolute top-4 right-4 sm:top-5 sm:right-5 flex items-center justify-center opacity-60 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
           {config.companyLogo === "microsoft" && (
-            <MicrosoftLogo className="w-7 h-7" />
+            <MicrosoftLogo className="w-7 h-7 sm:w-8 sm:h-8" />
           )}
           {config.companyLogo === "telescope" && (
-            <TelescopeLogo className="w-7 h-7" />
+            <TelescopeLogo className="w-7 h-7 sm:w-8 sm:h-8" />
           )}
           {config.companyLogo === "medyat" && (
-            <Image
-              src="https://www.medya-t.com/img/medyat.png"
-              alt="Medya-T Logo"
-              width={28}
-              height={28}
-              className="dark:invert dark:hue-rotate-180"
-            />
+            <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center">
+              <Image
+                src="https://www.medya-t.com/img/medyat.png"
+                alt="Medya-T Logo"
+                width={32}
+                height={32}
+                className="max-w-full max-h-full w-auto h-auto dark:invert dark:hue-rotate-180 object-contain"
+              />
+            </div>
           )}
         </div>
       )}
 
       {/* Quote Text */}
-      <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-3 pt-2 [dir=ltr]:pr-10 [dir=rtl]:pl-10">
+      <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-3 pt-2 pr-12 sm:pr-14 break-words">
         &ldquo;{quote}&rdquo;
       </h3>
 
