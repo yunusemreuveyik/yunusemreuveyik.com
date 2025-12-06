@@ -15,6 +15,7 @@ export function AppStoreBadge({
     <svg
       className={className}
       viewBox="0 0 120 40"
+      preserveAspectRatio="xMidYMid meet"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect width="120" height="40" rx="6" fill={bgColor} />
@@ -49,6 +50,7 @@ export function GooglePlayBadge({ className = "" }: { className?: string }) {
     <svg
       className={className}
       viewBox="0 0 135 40"
+      preserveAspectRatio="xMidYMid meet"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect width="135" height="40" rx="6" fill="#000" />

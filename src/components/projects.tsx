@@ -115,21 +115,21 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Store Badges - Stack on mobile, horizontal on desktop */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-3 w-full sm:w-auto">
+              {/* Store Badges - Row layout, centered */}
+              <div className="flex flex-row items-center justify-center gap-3 w-full">
                 <a
                   href="https://apps.apple.com/tr/app/motofamily/id6749791459"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded flex justify-center sm:justify-start"
+                  className="transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded flex justify-center shrink-0"
                   aria-label="Download on the App Store"
                 >
                   <AppStoreBadge
-                    className="h-[40px] w-[120px] dark:hidden"
+                    className="h-[40px] w-auto min-w-[120px] dark:hidden"
                     variant="black"
                   />
                   <AppStoreBadge
-                    className="h-[40px] w-[120px] hidden dark:block"
+                    className="h-[40px] w-auto min-w-[120px] hidden dark:block"
                     variant="white"
                   />
                 </a>
@@ -137,10 +137,10 @@ export default function Projects() {
                   href="https://play.google.com/store/apps/details?id=com.anonymous.MotoFamily"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded flex justify-center sm:justify-start"
+                  className="transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded flex justify-center shrink-0"
                   aria-label="Get it on Google Play"
                 >
-                  <GooglePlayBadge className="h-[40px] w-[135px]" />
+                  <GooglePlayBadge className="h-[40px] w-auto min-w-[135px]" />
                 </a>
               </div>
             </div>
