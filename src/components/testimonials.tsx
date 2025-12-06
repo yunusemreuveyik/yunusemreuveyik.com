@@ -88,7 +88,7 @@ function TestimonialCard({
       )}
 
       {/* Quote Text */}
-      <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-3 pt-2 pr-10">
+      <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-3 pt-2 [dir=ltr]:pr-10 [dir=rtl]:pl-10">
         &ldquo;{quote}&rdquo;
       </h3>
 

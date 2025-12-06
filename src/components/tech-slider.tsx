@@ -100,8 +100,8 @@ export default function TechSlider() {
     <div className="w-full overflow-hidden">
       <div className="relative">
         {/* Gradient masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-white dark:from-neutral-950 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-white dark:from-neutral-950 to-transparent z-10 pointer-events-none" />
+        <div className="absolute [dir=ltr]:left-0 [dir=rtl]:right-0 top-0 bottom-0 w-24 [dir=ltr]:bg-linear-to-r [dir=rtl]:bg-linear-to-l from-white dark:from-neutral-950 to-transparent z-10 pointer-events-none" />
+        <div className="absolute [dir=ltr]:right-0 [dir=rtl]:left-0 top-0 bottom-0 w-24 [dir=ltr]:bg-linear-to-l [dir=rtl]:bg-linear-to-r from-white dark:from-neutral-950 to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling track */}
         <div className="flex overflow-hidden">

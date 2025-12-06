@@ -91,7 +91,7 @@ export default function Projects() {
               </div>
 
               {/* Title & Description */}
-              <div className="text-center sm:text-left space-y-3 flex-1">
+              <div className="text-center sm:[dir=ltr]:text-left sm:[dir=rtl]:text-right space-y-3 flex-1">
                 <div className="space-y-1">
                   <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
                     {t("motofamily.status")}
