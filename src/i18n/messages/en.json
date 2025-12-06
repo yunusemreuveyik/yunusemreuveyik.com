@@ -107,6 +107,7 @@
     "sectionTitle": "What People Say",
     "roleAt": "at",
     "filters": {
+      "label": "Filter testimonials by company",
       "all": "All",
       "microsoft": "Microsoft",
       "telescope": "Telescope Labs",

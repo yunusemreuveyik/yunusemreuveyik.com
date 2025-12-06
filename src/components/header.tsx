@@ -45,6 +45,17 @@ export default function Header() {
     };
   }, [mobileMenuOpen]);
 
+  // Handle Escape key to close mobile menu
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [mobileMenuOpen]);
+
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
@@ -72,11 +83,12 @@ export default function Header() {
                 <Link
                   key={item.key}
                   href={item.href}
-                  className={`text-sm transition-colors ${
+                  className={`text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded ${
                     isActive(item.href)
                       ? "text-neutral-900 dark:text-white"
                       : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
                   }`}
+                  aria-current={isActive(item.href) ? "page" : undefined}
                 >
                   {t(item.key)}
                 </Link>
@@ -93,8 +105,10 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
             aria-label="Open menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             <Menu className="w-5 h-5 text-neutral-700 dark:text-neutral-300" />
           </button>
@@ -117,11 +131,15 @@ export default function Header() {
 
             {/* Bottom Sheet Menu */}
             <motion.div
+              id="mobile-menu"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="mobile-menu-title"
             >
               <div className="bg-white dark:bg-neutral-900 rounded-t-2xl border-t border-neutral-200 dark:border-neutral-800 max-h-[85vh] overflow-auto shadow-2xl">
                 {/* Handle */}
@@ -131,12 +149,15 @@ export default function Header() {
 
                 {/* Close Button Row */}
                 <div className="flex items-center justify-between px-4 pb-2">
-                  <span className="text-sm font-medium text-neutral-900 dark:text-white">
+                  <span
+                    id="mobile-menu-title"
+                    className="text-sm font-medium text-neutral-900 dark:text-white"
+                  >
                     {t("menu")}
                   </span>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                    className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
                     aria-label="Close menu"
                   >
                     <X className="w-5 h-5 text-neutral-500 dark:text-neutral-400" />
@@ -157,11 +178,14 @@ export default function Header() {
                         <Link
                           href={item.href}
                           onClick={() => setMobileMenuOpen(false)}
-                          className={`flex items-center gap-3 px-4 py-3.5 rounded-xl transition-colors ${
+                          className={`flex items-center gap-3 px-4 py-3.5 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 ${
                             isActive(item.href)
                               ? "bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-white font-medium"
                               : "text-neutral-500 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
                           }`}
+                          aria-current={
+                            isActive(item.href) ? "page" : undefined
+                          }
                         >
                           <Icon className="w-5 h-5" />
                           <span className="text-[15px]">{t(item.key)}</span>

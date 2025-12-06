@@ -104,6 +104,7 @@
     "sectionTitle": "İnsanlar Ne Diyor",
     "roleAt": "-",
     "filters": {
+      "label": "Referansları şirkete göre filtrele",
       "all": "Tümü",
       "microsoft": "Microsoft",
       "telescope": "Telescope Labs",

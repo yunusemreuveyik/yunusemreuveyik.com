@@ -27,9 +27,16 @@ export default function LocaleSwitcher({
       if (ref.current && !ref.current.contains(e.target as Node))
         setOpen(false);
     };
+    const onEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && open) setOpen(false);
+    };
     document.addEventListener("mousedown", onDocClick);
-    return () => document.removeEventListener("mousedown", onDocClick);
-  }, []);
+    document.addEventListener("keydown", onEscape);
+    return () => {
+      document.removeEventListener("mousedown", onDocClick);
+      document.removeEventListener("keydown", onEscape);
+    };
+  }, [open]);
 
   const switchTo = (l: string) => {
     router.replace({ pathname }, { locale: l }); // ✅ preserves path, swaps locale
@@ -42,8 +49,10 @@ export default function LocaleSwitcher({
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen((v) => !v)}
-        className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 cursor-pointer"
+        className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
         aria-label="Change language"
+        aria-expanded={open}
+        aria-haspopup="true"
       >
         <Globe className="w-[18px] h-[18px]" />
       </button>
@@ -60,6 +69,8 @@ export default function LocaleSwitcher({
                 ? "bottom-full mb-2 left-1/2 -translate-x-1/2"
                 : "right-0 top-full mt-2"
             }`}
+            role="listbox"
+            aria-label="Language selection"
           >
             {locales.map((l) => (
               <button

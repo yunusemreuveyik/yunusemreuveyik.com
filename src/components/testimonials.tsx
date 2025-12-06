@@ -184,12 +184,14 @@ function CompanyFilterButton({
       className={`
         inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
         transition-all duration-200 whitespace-nowrap cursor-pointer
+        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2
         ${
           isActive
             ? "bg-violet-500 text-white shadow-md shadow-violet-500/25"
             : "bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700"
         }
       `}
+      aria-pressed={isActive}
     >
       {logo}
       <span>{name}</span>
@@ -245,6 +247,8 @@ export default function Testimonials() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
         className="mb-10 flex flex-wrap gap-2"
+        role="group"
+        aria-label={t("filters.label") || "Filter testimonials by company"}
       >
         {companyFilters.map((filter) => (
           <CompanyFilterButton
