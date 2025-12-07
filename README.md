@@ -210,26 +210,19 @@ src/
 
 ### Installation
 
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/yunusemreuveyik/yunusemreuveyikcom.git
-   cd yunusemreuveyikcom
-   ```
-
-2. **Install dependencies**
+1. **Install dependencies**
 
    ```bash
    pnpm install
    ```
 
-3. **Run the development server**
+2. **Run the development server**
 
    ```bash
    pnpm dev
    ```
 
-4. **Open your browser**
+3. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000) to see the result.
 
 ### Available Scripts
