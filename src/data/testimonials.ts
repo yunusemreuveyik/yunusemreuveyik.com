@@ -61,7 +61,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "microsoft",
     author: {
       name: "Edgar Pansu",
-      role: "Product Manager",
+      role: "Product Owner",
       company: "Microsoft",
       linkedin: "https://www.linkedin.com/in/edgar-pansu-a999571b/",
     },
