@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -167,6 +167,24 @@ function TelescopeLogo({ className = "w-8 h-8" }: { className?: string }) {
 export default function MyExperiences() {
   const t = useTranslations("experience");
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile and set first card as focused on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    // On mobile, set first card as focused by default
+    if (window.innerWidth < 768 && experienceConfigs.length > 0) {
+      setHoveredId(experienceConfigs[0].id);
+    }
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <section id="experience" className="py-24">
@@ -200,9 +218,14 @@ export default function MyExperiences() {
           return (
             <div
               key={exp.id}
-              onMouseEnter={() => setHoveredId(exp.id)}
-              onMouseLeave={() => setHoveredId(null)}
-              className={`group relative grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4 md:gap-8 p-6 rounded-lg transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-neutral-800/50 border border-transparent hover:border-neutral-200/50 dark:hover:border-neutral-700/30 hover:shadow-lg dark:hover:shadow-neutral-900/50 cursor-pointer ${isFaded ? "opacity-50" : "opacity-100"}`}
+              onMouseEnter={() => !isMobile && setHoveredId(exp.id)}
+              onMouseLeave={() => !isMobile && setHoveredId(null)}
+              onClick={() => isMobile && setHoveredId(exp.id)}
+              className={`group relative grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4 md:gap-8 p-6 rounded-lg transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-neutral-800/50 border ${
+                isHovered
+                  ? "border-neutral-200/50 dark:border-neutral-700/30 bg-neutral-100 dark:bg-neutral-800/50 shadow-lg dark:shadow-neutral-900/50"
+                  : "border-transparent"
+              } hover:border-neutral-200/50 dark:hover:border-neutral-700/30 hover:shadow-lg dark:hover:shadow-neutral-900/50 cursor-pointer ${isFaded ? "opacity-50" : "opacity-100"}`}
             >
               {/* Date Range */}
               <div className="text-xs uppercase tracking-wider text-neutral-500 dark:text-neutral-500 pt-1">
