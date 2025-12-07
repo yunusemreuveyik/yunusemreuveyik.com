@@ -8,7 +8,7 @@ My personal portfolio website built with Next.js, TypeScript, Tailwind CSS.
 
 ### Core Technologies
 
-- **Next.js 16** - React framework with App Router and static export
+- **Next.js 16** - React framework with App Router (SSR, ISR, and static generation)
 - **React 19** - Latest React with concurrent features
 - **TypeScript** - Type-safe development
 - **Tailwind CSS v4** - Utility-first CSS framework
@@ -28,14 +28,14 @@ My personal portfolio website built with Next.js, TypeScript, Tailwind CSS.
 
 ## ✨ Features
 
-- **⚡ Performance Optimized** - Static export, lazy loading, code splitting, and optimized bundle sizes
+- **⚡ Performance Optimized** - Server-side rendering, lazy loading, code splitting, and optimized bundle sizes
 - **🌍 Full Internationalization** - Complete English and Turkish support with locale routing
 - **📱 Responsive Design** - Mobile-first approach with Tailwind CSS
 - **🎨 Modern UI** - Clean design with smooth animations and dark mode
 - **🔍 SEO Optimized** - Comprehensive meta tags, structured data (JSON-LD), sitemap, and robots.txt
 - **♿ WCAG 2.1 AA Compliant** - Full keyboard navigation, screen reader support, focus indicators, and high contrast mode
 - **🌙 Dark Mode** - System preference detection with manual toggle
-- **📊 Static Site Generation** - Fully static export for fast hosting on any platform
+- **📊 Optimized Rendering** - Static generation, server-side rendering, and incremental static regeneration
 - **🎯 Custom Avatar Generation** - Local SVG avatar generation (no external API calls)
 - **💼 Professional Portfolio** - Showcase of experience, projects, and references
 
@@ -47,11 +47,11 @@ My personal portfolio website built with Next.js, TypeScript, Tailwind CSS.
 - **Route-based Splitting** - Automatic code splitting per route with Next.js App Router
 - **Client Component Isolation** - Heavy components loaded only when needed
 
-### Static Site Generation
+### Rendering & Performance
 
-- **Full Static Export** - Complete static HTML generation for maximum performance
-- **Pre-rendered Pages** - All pages pre-rendered at build time
-- **Optimized Images** - Next.js Image component with proper sizing and lazy loading
+- **Static Generation** - Pages pre-rendered at build time for maximum performance
+- **Server-Side Rendering** - Dynamic content rendered on-demand when needed
+- **Optimized Images** - Next.js Image component with automatic AVIF/WebP conversion and lazy loading
 
 ### Asset Optimization
 
@@ -62,9 +62,10 @@ My personal portfolio website built with Next.js, TypeScript, Tailwind CSS.
 
 ### Build Optimizations
 
-- **Conditional Static Export** - Static export only in production, normal dev server in development
-- **Trailing Slashes** - Configured for better `.htaccess` compatibility
+- **Vercel Optimized** - Configured for Vercel's edge network and automatic optimizations
+- **Trailing Slashes** - Clean URLs with trailing slashes for better SEO
 - **Optimized Bundle** - Tree-shaking and dead code elimination
+- **Image Optimization** - Automatic AVIF/WebP conversion via Vercel's image optimization
 
 ## 🔍 SEO Optimizations
 
@@ -228,8 +229,8 @@ src/
 ### Available Scripts
 
 - `pnpm dev` - Start development server
-- `pnpm build` - Build for production (generates static export in `out/` directory)
-- `pnpm start` - Start production server (not used for static export)
+- `pnpm build` - Build for production (optimized for Vercel deployment)
+- `pnpm start` - Start production server (for local testing)
 - `pnpm lint` - Run ESLint
 
 ## 🌍 Internationalization
