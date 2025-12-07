@@ -17,11 +17,6 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cdn.jsdelivr.net",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
         hostname: "eveara.com",
         pathname: "/**",
       },

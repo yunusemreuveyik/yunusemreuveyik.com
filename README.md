@@ -56,7 +56,7 @@ My personal portfolio website built with Next.js, TypeScript, Tailwind CSS.
 ### Asset Optimization
 
 - **Local Avatar Generation** - Custom SVG avatar generation replaces external API calls (`ui-avatars.com`)
-- **CDN Preconnect** - Preconnect to `cdn.jsdelivr.net` for faster asset loading
+- **Local Asset Storage** - All assets (logos, images, icons) served from local `/public` directory
 - **Centralized Tech Logos** - Single source of truth for tech stack logos (`tech-logos.ts`)
 - **Local Store Badges** - Custom SVG components for App Store and Google Play badges
 
