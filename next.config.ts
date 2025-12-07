@@ -6,15 +6,14 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  // Only enable static export for production builds
-  ...(process.env.NODE_ENV === "production" && {
-    output: "export",
-    trailingSlash: true, // Ensure trailing slashes for better .htaccess compatibility
-  }),
+  // Optimized for Vercel - no static export needed
+  // Vercel supports full Next.js features (SSR, ISR, API routes, etc.)
+  trailingSlash: true, // Clean URLs with trailing slashes
 
+  // Image optimization enabled (Vercel has built-in image optimization)
   images: {
-    // Only disable optimization for static export (production)
-    ...(process.env.NODE_ENV === "production" && { unoptimized: true }),
+    // Enable Next.js Image Optimization on Vercel
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
@@ -33,6 +32,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  // Performance optimizations
+  compress: true, // Enable gzip compression
+  poweredByHeader: false, // Remove X-Powered-By header for security
+
+  // Vercel-specific optimizations
+  reactStrictMode: true, // Enable React strict mode
 };
 
 export default withNextIntl(nextConfig);
