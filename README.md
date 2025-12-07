@@ -2,7 +2,7 @@
 
 **yunusemreuveyik.com**
 
-My personal portfolio website built with Next.js, TypeScript, Tailwind CSS, and deployed as a static site on cPanel hosting.
+My personal portfolio website built with Next.js, TypeScript, Tailwind CSS.
 
 ## 🚀 Tech Stack
 
