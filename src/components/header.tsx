@@ -83,6 +83,7 @@ export default function Header() {
                 <Link
                   key={item.key}
                   href={item.href}
+                  prefetch={false}
                   className={`text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded ${
                     isActive(item.href)
                       ? "text-neutral-900 dark:text-white"
@@ -177,6 +178,7 @@ export default function Header() {
                       >
                         <Link
                           href={item.href}
+                          prefetch={false}
                           onClick={() => setMobileMenuOpen(false)}
                           className={`flex items-center gap-3 px-4 py-3.5 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 ${
                             isActive(item.href)

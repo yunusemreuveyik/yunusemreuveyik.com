@@ -10,36 +10,36 @@ export interface TechLogo {
 export const techLogos: TechLogo[] = [
   {
     name: "React",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    logo: "/logos/tech/react.svg",
   },
   {
     name: "React Native",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    logo: "/logos/tech/react.svg",
   },
   {
     name: "Expo",
-    logo: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/expo.svg",
+    logo: "/logos/tech/expo.svg",
     invertDark: true,
   },
   {
     name: "TypeScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    logo: "/logos/tech/typescript.svg",
   },
   {
     name: "Node.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    logo: "/logos/tech/nodejs.svg",
   },
   {
     name: "MongoDB",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    logo: "/logos/tech/mongodb.svg",
   },
   {
     name: "Firebase",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    logo: "/logos/tech/firebase.svg",
   },
   {
     name: "Azure",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+    logo: "/logos/tech/azure.svg",
   },
 ];
 

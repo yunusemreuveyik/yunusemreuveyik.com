@@ -84,6 +84,7 @@ export default function WelcomeComponent() {
         <motion.div variants={item} className="flex justify-center gap-4 pt-2">
           <Link
             href="/experience"
+            prefetch={false}
             className="inline-flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded"
           >
             <Briefcase className="w-4 h-4" />
@@ -92,6 +93,7 @@ export default function WelcomeComponent() {
           <span className="text-neutral-300 dark:text-neutral-700">|</span>
           <Link
             href="/references"
+            prefetch={false}
             className="inline-flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded"
           >
             <MessageSquareQuote className="w-4 h-4" />

@@ -111,11 +111,6 @@ export default async function RootLayout({
       className={`${inter.variable} ${caveat.variable}`}
     >
       <head>
-        <link
-          rel="preconnect"
-          href="https://cdn.jsdelivr.net"
-          crossOrigin="anonymous"
-        />
         <HomeJsonLd locale={locale} />
       </head>
       <body className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased font-sans">

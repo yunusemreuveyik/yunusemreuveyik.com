@@ -13,46 +13,29 @@ interface ExperienceConfig {
   technologies: string[];
 }
 
-// Tech logo mapping using devicons CDN
+// Tech logo mapping using local logos
 const techLogos: Record<string, string> = {
-  React:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  TypeScript:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  JavaScript:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  "Node.js":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  Angular:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg",
-  "Angular v1":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-  "Vue.js":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-  Figma:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-  HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  Bootstrap:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-  jQuery:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
-  PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-  Laravel:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-  MySQL:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-  iOS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg",
-  Android:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
-  IONIC:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg",
-  "Azure DevOps":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
-  "Azure Portal":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
-  "Knockout.js":
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/knockout/knockout-plain-wordmark.svg",
+  React: "/logos/tech/react.svg",
+  TypeScript: "/logos/tech/typescript.svg",
+  JavaScript: "/logos/tech/javascript.svg",
+  "Node.js": "/logos/tech/nodejs.svg",
+  Angular: "/logos/tech/angular-new.svg",
+  "Angular v1": "/logos/tech/angular.svg",
+  "Vue.js": "/logos/tech/vuejs.svg",
+  Figma: "/logos/tech/figma.svg",
+  HTML: "/logos/tech/html5.svg",
+  CSS: "/logos/tech/css3.svg",
+  Bootstrap: "/logos/tech/bootstrap.svg",
+  jQuery: "/logos/tech/jquery.svg",
+  PHP: "/logos/tech/php.svg",
+  Laravel: "/logos/tech/laravel.svg",
+  MySQL: "/logos/tech/mysql.svg",
+  iOS: "/logos/tech/apple.svg",
+  Android: "/logos/tech/android.svg",
+  IONIC: "/logos/tech/ionic.svg",
+  "Azure DevOps": "/logos/tech/azure.svg",
+  "Azure Portal": "/logos/tech/azure.svg",
+  "Knockout.js": "/logos/tech/knockout.svg",
   FAST: "/logos/fast.svg",
 };
 
