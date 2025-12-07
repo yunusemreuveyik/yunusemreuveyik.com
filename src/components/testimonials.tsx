@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -12,6 +12,7 @@ import {
   testimonialCounts,
   companyFilters,
   getCompanyFilter,
+  getRolePower,
   type TestimonialConfig,
   type CompanyFilter,
 } from "@/data/testimonials";
@@ -42,6 +43,8 @@ interface TestimonialCardProps {
   quote: string;
   description: string;
   roleAt: string;
+  isTouched: boolean;
+  onTouch: () => void;
 }
 
 function TestimonialCard({
@@ -49,6 +52,8 @@ function TestimonialCard({
   quote,
   description,
   roleAt,
+  isTouched,
+  onTouch,
 }: TestimonialCardProps) {
   // Generate avatar URL locally (no external request)
   const avatarUrl = useMemo(
@@ -59,7 +64,10 @@ function TestimonialCard({
   return (
     <motion.div
       variants={item}
-      className="group relative p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800 shadow-sm hover:shadow-lg dark:shadow-neutral-950/50 transition-all duration-300 hover:border-violet-200 dark:hover:border-violet-500/30"
+      onTouchStart={onTouch}
+      className={`group relative p-6 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800 shadow-sm hover:shadow-lg dark:shadow-neutral-950/50 transition-all duration-300 hover:border-violet-200 dark:hover:border-violet-500/30 ${
+        isTouched ? "shadow-lg border-violet-200 dark:border-violet-500/30" : ""
+      }`}
     >
       {/* Quote Icon */}
       <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-violet-500/10 dark:bg-violet-500/20 flex items-center justify-center">
@@ -68,7 +76,11 @@ function TestimonialCard({
 
       {/* Company Logo */}
       {config.companyLogo && (
-        <div className="absolute top-4 right-4 sm:top-5 sm:right-5 flex items-center justify-center opacity-60 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
+        <div
+          className={`absolute top-4 right-4 sm:top-5 sm:right-5 flex items-center justify-center transition-opacity z-10 pointer-events-none ${
+            isTouched ? "opacity-100" : "opacity-60 group-hover:opacity-100"
+          }`}
+        >
           {config.companyLogo === "microsoft" && (
             <MicrosoftLogo className="w-7 h-7 sm:w-8 sm:h-8" />
           )}
@@ -83,6 +95,17 @@ function TestimonialCard({
                 width={32}
                 height={32}
                 className="max-w-full max-h-full w-auto h-auto dark:invert dark:hue-rotate-180 object-contain"
+              />
+            </div>
+          )}
+          {config.companyLogo === "kod" && (
+            <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center">
+              <Image
+                src="/logos/companies/kod-yazilim-logo.png"
+                alt="Kod Yazılım Logo"
+                width={32}
+                height={32}
+                className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg"
               />
             </div>
           )}
@@ -129,7 +152,7 @@ function TestimonialCard({
             href={config.author.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#0A66C2]/10 hover:bg-[#0A66C2]/20 transition-colors text-[#0A66C2] font-medium"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#0A66C2]/10 hover:bg-[#0A66C2]/20 active:bg-[#0A66C2]/20 transition-colors text-[#0A66C2] font-medium"
             aria-label={`${config.author.name}'s LinkedIn profile`}
           >
             <LinkedInIcon className="w-4 h-4" />
@@ -175,6 +198,16 @@ function CompanyFilterButton({
             className="dark:invert dark:hue-rotate-180"
           />
         );
+      case "kod":
+        return (
+          <Image
+            src="/logos/companies/kod-yazilim-logo.png"
+            alt="Kod Yazılım"
+            width={16}
+            height={16}
+            className="object-contain rounded"
+          />
+        );
       default:
         return null;
     }
@@ -186,7 +219,7 @@ function CompanyFilterButton({
       className={`
         inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
         transition-all duration-200 whitespace-nowrap cursor-pointer
-        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2
+        focus-visible:outline-none md:focus-visible:ring-2 md:focus-visible:ring-violet-500 md:focus-visible:ring-offset-2
         ${
           isActive
             ? "bg-violet-500 text-white shadow-md shadow-violet-500/25"
@@ -217,13 +250,34 @@ function CompanyFilterButton({
 export default function Testimonials() {
   const t = useTranslations("references");
   const [activeFilter, setActiveFilter] = useState<CompanyFilter>("all");
+  const [touchedCardId, setTouchedCardId] = useState<string | null>(null);
 
   // Memoize filtered testimonials
+  // Apply role power sorting only when a company filter is active (not "all")
   const filteredTestimonials = useMemo(() => {
-    if (activeFilter === "all") return testimonialConfigs;
-    return testimonialConfigs.filter(
-      (config) => getCompanyFilter(config) === activeFilter
-    );
+    let filtered = testimonialConfigs;
+
+    // Filter by company if not "all"
+    if (activeFilter !== "all") {
+      filtered = testimonialConfigs.filter(
+        (config) => getCompanyFilter(config) === activeFilter
+      );
+
+      // Sort by role power when filtering by company
+      filtered = [...filtered].sort((a, b) => {
+        const powerA = getRolePower(a.author.role);
+        const powerB = getRolePower(b.author.role);
+        // Sort descending (highest power first)
+        return powerB - powerA;
+      });
+    }
+
+    return filtered;
+  }, [activeFilter]);
+
+  // Clear touched card when filter changes
+  useEffect(() => {
+    setTouchedCardId(null);
   }, [activeFilter]);
 
   return (
@@ -290,6 +344,8 @@ export default function Testimonials() {
                   `testimonials.${config.translationKey}.description`
                 )}
                 roleAt={t("roleAt")}
+                isTouched={touchedCardId === config.id}
+                onTouch={() => setTouchedCardId(config.id)}
               />
             </motion.div>
           ))}

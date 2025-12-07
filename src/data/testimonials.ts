@@ -1,7 +1,7 @@
 // Testimonial configurations
 // Text content (quotes and descriptions) come from translation files
 
-export type CompanyLogo = "microsoft" | "telescope" | "medyat";
+export type CompanyLogo = "microsoft" | "telescope" | "medyat" | "kod";
 export type CompanyFilter =
   | "all"
   | "microsoft"
@@ -21,6 +21,47 @@ export interface TestimonialConfig {
   };
 }
 
+// Role power hierarchy - higher number = more powerful role
+// CEO is highest, then Product Owner, then Product Manager, etc.
+export function getRolePower(role: string): number {
+  const roleLower = role.toLowerCase();
+
+  // Executive roles
+  if (roleLower.includes("ceo")) return 100;
+
+  // Product Owner is second highest after CEO
+  if (roleLower.includes("product owner")) return 95;
+
+  // Product Manager comes after Product Owner
+  if (roleLower.includes("product manager")) return 90;
+  if (roleLower.includes("principal product manager")) return 90;
+
+  // Management roles
+  if (roleLower.includes("deputy general manager")) return 85;
+  if (roleLower.includes("head of")) return 80;
+  if (roleLower.includes("team leader")) return 75;
+
+  // Principal technical roles
+  if (roleLower.includes("principal software engineer")) return 70;
+
+  // Senior technical roles
+  if (roleLower.includes("senior software developer")) return 65;
+
+  // Engineering roles
+  if (roleLower.includes("backend engineer")) return 60;
+  if (roleLower.includes("full stack engineer")) return 60;
+  if (roleLower.includes("frontend developer")) return 55;
+  if (roleLower.includes("backend developer")) return 55;
+  if (roleLower.includes("software engineer")) return 50;
+
+  // Design roles
+  if (roleLower.includes("ui/ux designer")) return 45;
+
+  // Default for unknown roles
+  return 0;
+}
+
+// Testimonials array (unsorted - sorting happens in component when filtering)
 export const testimonialConfigs: TestimonialConfig[] = [
   {
     id: "1",
@@ -169,9 +210,10 @@ export const testimonialConfigs: TestimonialConfig[] = [
   {
     id: "14",
     translationKey: "fatma",
+    companyLogo: "kod",
     author: {
       name: "Fatma Kalkan",
-      role: "Senior Software Developer",
+      role: "Senior Backend Developer",
       company: "Kod Yazılım",
       linkedin: "https://www.linkedin.com/in/fatma-kalkan-768276149/",
     },
@@ -179,6 +221,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
   {
     id: "15",
     translationKey: "oguzhan",
+    companyLogo: "kod",
     author: {
       name: "Oğuzhan Selamoğlu",
       role: "Head of Software Department",
@@ -189,9 +232,10 @@ export const testimonialConfigs: TestimonialConfig[] = [
   {
     id: "16",
     translationKey: "isfendiyar",
+    companyLogo: "kod",
     author: {
       name: "İsfendiyar Akpınar",
-      role: "Backend Developer",
+      role: "Senior Backend Developer",
       company: "Kod Yazılım",
       linkedin: "https://www.linkedin.com/in/isfendiyar-akpinar/",
     },
@@ -199,6 +243,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
   {
     id: "17",
     translationKey: "mehmet",
+    companyLogo: "kod",
     author: {
       name: "Mehmet Gülen",
       role: "Deputy General Manager",
@@ -237,8 +282,7 @@ export const testimonialCounts = {
     .length,
   telescope: testimonialConfigs.filter((c) => c.companyLogo === "telescope")
     .length,
-  kod: testimonialConfigs.filter((c) => c.author.company === "Kod Yazılım")
-    .length,
+  kod: testimonialConfigs.filter((c) => c.companyLogo === "kod").length,
   medyat: testimonialConfigs.filter((c) => c.companyLogo === "medyat").length,
 };
 
@@ -256,6 +300,7 @@ export function getCompanyFilter(config: TestimonialConfig): CompanyFilter {
   if (config.companyLogo === "microsoft") return "microsoft";
   if (config.companyLogo === "telescope") return "telescope";
   if (config.companyLogo === "medyat") return "medyat";
+  if (config.companyLogo === "kod") return "kod";
   if (config.author.company === "Kod Yazılım") return "kod";
   return "all";
 }
