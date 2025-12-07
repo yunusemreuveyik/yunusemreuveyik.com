@@ -2,7 +2,7 @@
 
 **yunusemreuveyik.com**
 
-My personal portfolio website built with Next.js, TypeScript, Tailwind CSS, and deployed as a static site on cPanel hosting.
+My personal portfolio website built with Next.js, TypeScript, Tailwind CSS.
 
 ## 🚀 Tech Stack
 
@@ -210,26 +210,19 @@ src/
 
 ### Installation
 
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/yunusemreuveyik/yunusemreuveyikcom.git
-   cd yunusemreuveyikcom
-   ```
-
-2. **Install dependencies**
+1. **Install dependencies**
 
    ```bash
    pnpm install
    ```
 
-3. **Run the development server**
+2. **Run the development server**
 
    ```bash
    pnpm dev
    ```
 
-4. **Open your browser**
+3. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000) to see the result.
 
 ### Available Scripts
@@ -238,29 +231,6 @@ src/
 - `pnpm build` - Build for production (generates static export in `out/` directory)
 - `pnpm start` - Start production server (not used for static export)
 - `pnpm lint` - Run ESLint
-
-## 📦 Deployment
-
-### Static Export to cPanel
-
-This project is configured for static site generation and can be deployed to any static hosting service, including cPanel.
-
-1. **Build the project**
-
-   ```bash
-   pnpm build
-   ```
-
-### Build Output
-
-The build process generates:
-
-- Static HTML files for all routes
-- Optimized JavaScript bundles
-- Optimized CSS files
-- Static assets (images, fonts, etc.)
-- `sitemap.xml` and `robots.txt`
-- Dynamic favicons and OG images
 
 ## 🌍 Internationalization
 
