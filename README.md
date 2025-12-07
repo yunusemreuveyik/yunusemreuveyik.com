@@ -239,29 +239,6 @@ src/
 - `pnpm start` - Start production server (not used for static export)
 - `pnpm lint` - Run ESLint
 
-## 📦 Deployment
-
-### Static Export to cPanel
-
-This project is configured for static site generation and can be deployed to any static hosting service, including cPanel.
-
-1. **Build the project**
-
-   ```bash
-   pnpm build
-   ```
-
-### Build Output
-
-The build process generates:
-
-- Static HTML files for all routes
-- Optimized JavaScript bundles
-- Optimized CSS files
-- Static assets (images, fonts, etc.)
-- `sitemap.xml` and `robots.txt`
-- Dynamic favicons and OG images
-
 ## 🌍 Internationalization
 
 The website supports two languages:
