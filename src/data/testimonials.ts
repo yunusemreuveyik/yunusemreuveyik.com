@@ -80,7 +80,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "microsoft",
     author: {
       name: "Rıza Aktunç",
-      role: "Team Leader",
+      role: "Senior Team Lead Engineer",
       company: "Microsoft",
       linkedin: "https://www.linkedin.com/in/rizaaktunc/",
     },
@@ -124,7 +124,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "microsoft",
     author: {
       name: "Aslı Atar",
-      role: "Frontend Developer",
+      role: "Senior Software Engineer",
       company: "Microsoft",
       linkedin: "https://www.linkedin.com/in/asli-atar/",
     },
@@ -135,7 +135,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "microsoft",
     author: {
       name: "Mustafa Yiğit Şahin",
-      role: "Software Engineer",
+      role: "Senior Software Engineer",
       company: "Microsoft",
       linkedin:
         "https://www.linkedin.com/in/mustafa-yi%C4%9Fit-%C5%9Fahin-msc-5a477922/",
@@ -147,7 +147,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "microsoft",
     author: {
       name: "Mert Uysal",
-      role: "Software Engineer",
+      role: "Senior Software Engineer",
       company: "Microsoft",
       linkedin: "https://www.linkedin.com/in/mert-uysal-3579a516a/",
     },
@@ -158,7 +158,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "microsoft",
     author: {
       name: "Hüseyin Polat",
-      role: "Software Engineer",
+      role: "Senior Software Engineer",
       company: "Microsoft",
       linkedin: "https://www.linkedin.com/in/huseyin-polat/",
     },
@@ -169,7 +169,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "microsoft",
     author: {
       name: "Tuğçe Yalçın",
-      role: "Software Engineer",
+      role: "Senior Software Engineer",
       company: "Microsoft",
       linkedin: "https://www.linkedin.com/in/tugceyalc%C4%B1n/",
     },
@@ -180,7 +180,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "microsoft",
     author: {
       name: "Mustafa Gür",
-      role: "Software Engineer",
+      role: "Senior Software Engineer",
       company: "Microsoft",
       linkedin: "https://www.linkedin.com/in/musgurcom/",
     },
@@ -191,7 +191,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "telescope",
     author: {
       name: "Tahir Yüksel",
-      role: "UI/UX Designer",
+      role: "Senior UI/UX Designer",
       company: "Telescope Labs",
       linkedin: "https://www.linkedin.com/in/tahir-yuksel/",
     },
@@ -202,7 +202,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "telescope",
     author: {
       name: "Tarık Umutlu",
-      role: "Backend Engineer",
+      role: "Senior Backend Engineer",
       company: "Telescope Labs",
       linkedin: "https://www.linkedin.com/in/tar%C4%B1k-umutlu-b87135165/",
     },
@@ -257,7 +257,7 @@ export const testimonialConfigs: TestimonialConfig[] = [
     companyLogo: "medyat",
     author: {
       name: "Murat Altay",
-      role: "Full Stack Engineer",
+      role: "Senior Full Stack Engineer",
       company: "Medya-T",
       linkedin: "https://www.linkedin.com/in/murat-altay/",
     },
