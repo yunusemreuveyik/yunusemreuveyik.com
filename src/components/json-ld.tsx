@@ -155,8 +155,8 @@ export function ProjectsJsonLd({ locale = "en" }: { locale?: string }) {
             : "Projects - Yunus Emre Uveyik",
         description:
           locale === "tr"
-            ? "Projelerimi keşfedin: MotoFamily - React Native, Expo ve Node.js ile geliştirilen motorsiklet tutkunları için sosyal ağ uygulaması."
-            : "Explore my projects including MotoFamily - a social network app for motorcycle enthusiasts built with React Native, Expo, and Node.js.",
+            ? "Projelerimi keşfedin: MotoFamily - React Native, Expo ve Node.js ile geliştirilen motorsiklet tutkunları için sosyal ağ uygulaması. react-seamless-slider - TypeScript desteği ile React için sorunsuz sonsuz kaydırma slider bileşeni."
+            : "Explore my projects including MotoFamily - a social network app for motorcycle enthusiasts built with React Native, Expo, and Node.js. react-seamless-slider - a seamless infinite scrolling slider component for React with TypeScript support.",
         url: `${baseUrl}/${locale}/projects`,
         inLanguage: locale,
         isPartOf: {
@@ -196,6 +196,32 @@ export function ProjectsJsonLd({ locale = "en" }: { locale?: string }) {
         softwareVersion: "1.0",
         releaseNotes: "Initial release",
         datePublished: "2025-01-01",
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${baseUrl}/projects/react-seamless-slider#software`,
+        name: "react-seamless-slider",
+        applicationCategory: "WebApplication",
+        operatingSystem: "Web",
+        description:
+          locale === "tr"
+            ? "TypeScript desteği ile React için sorunsuz sonsuz kaydırma slider bileşeni. Görünür sıçrama veya yanıp sönme olmadan pürüzsüz, sürekli kaydırma özellikleri."
+            : "A seamless infinite scrolling slider component for React with TypeScript support. Features smooth, continuous scrolling without any visible jumps or blinks.",
+        url: "https://www.npmjs.com/package/react-seamless-slider",
+        codeRepository: "https://github.com/yunusemreuveyik/react-seamless-slider",
+        author: {
+          "@type": "Person",
+          "@id": `${baseUrl}/#person`,
+        },
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
+        softwareVersion: "1.0.2",
+        releaseNotes: "Initial release with SSR compatibility",
+        datePublished: "2025-01-10",
+        keywords: "react, slider, carousel, infinite, seamless, typescript, nextjs, ssr",
       },
     ],
   };

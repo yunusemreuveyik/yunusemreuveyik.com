@@ -221,7 +221,28 @@
         "platforms": "Platformlar",
         "downloads": "İndirme",
         "launched": "Lansman"
-      }
+      },
+      "viewAppStore": "App Store'da Görüntüle",
+      "viewGooglePlay": "Google Play'de Görüntüle"
+    },
+    "reactSeamlessSlider": {
+      "status": "Yayında",
+      "role": "Geliştirici & Bakımcı",
+      "description": "TypeScript desteği ile React için sorunsuz sonsuz kaydırma slider bileşeni. Görünür sıçrama veya yanıp sönme olmadan pürüzsüz, sürekli kaydırma özellikleri. Logolar, referanslar veya sonsuz kaydırma gerektiren herhangi bir içerik için mükemmel.",
+      "featuresTitle": "Öne Çıkan Özellikler",
+      "features": {
+        "seamless": "Sorunsuz sonsuz kaydırma",
+        "flexible": "Esnek içerik desteği",
+        "performance": "Performans optimizasyonu",
+        "responsive": "Duyarlı tasarım",
+        "typescript": "TypeScript desteği",
+        "customizable": "Yüksek özelleştirilebilirlik",
+        "darkMode": "Karanlık mod desteği",
+        "ssr": "SSR uyumlu"
+      },
+      "techTitle": "Kullanılan Teknolojiler",
+      "viewNpm": "NPM'de Görüntüle",
+      "viewGitHub": "GitHub'da Görüntüle"
     }
   },
   "notFound": {

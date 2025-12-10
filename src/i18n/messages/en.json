@@ -224,7 +224,28 @@
         "platforms": "Platforms",
         "downloads": "Downloads",
         "launched": "Launched"
-      }
+      },
+      "viewAppStore": "View on App Store",
+      "viewGooglePlay": "View on Google Play"
+    },
+    "reactSeamlessSlider": {
+      "status": "Published",
+      "role": "Creator & Maintainer",
+      "description": "A seamless infinite scrolling slider component for React with TypeScript support. Features smooth, continuous scrolling without any visible jumps or blinks. Perfect for displaying logos, testimonials, or any content that needs to scroll infinitely.",
+      "featuresTitle": "Key Features",
+      "features": {
+        "seamless": "Seamless infinite scroll",
+        "flexible": "Flexible content support",
+        "performance": "Performance optimized",
+        "responsive": "Responsive design",
+        "typescript": "TypeScript support",
+        "customizable": "Highly customizable",
+        "darkMode": "Dark mode ready",
+        "ssr": "SSR compatible"
+      },
+      "techTitle": "Tech Stack",
+      "viewNpm": "View on NPM",
+      "viewGitHub": "View on GitHub"
     }
   },
   "notFound": {

@@ -27,6 +27,11 @@ export async function generateMetadata({
     "Android App",
     "Motorcycle App",
     "Social Network App",
+    "react-seamless-slider",
+    "React Component",
+    "TypeScript",
+    "NPM Package",
+    "Open Source",
     "Portfolio Projects",
   ];
 

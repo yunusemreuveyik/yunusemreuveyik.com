@@ -21,8 +21,8 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-// Tech stack - using shared logos from tech-logos.ts
-const techStackNames = [
+// Tech stack for MotoFamily - using shared logos from tech-logos.ts
+const motofamilyTechStackNames = [
   "React Native",
   "Expo",
   "TypeScript",
@@ -32,11 +32,11 @@ const techStackNames = [
   "Azure",
 ];
 
-const techStack = techStackNames
+const motofamilyTechStack = motofamilyTechStackNames
   .map((name) => getTechLogo(name))
   .filter((tech): tech is NonNullable<typeof tech> => tech !== undefined);
 
-const features = [
+const motofamilyFeatures = [
   { key: "liveMap" },
   { key: "chat" },
   { key: "discounts" },
@@ -44,6 +44,24 @@ const features = [
   { key: "photos" },
   { key: "raceCalendar" },
   { key: "rewards" },
+];
+
+// Tech stack for react-seamless-slider
+const sliderTechStackNames = ["React", "TypeScript"];
+
+const sliderTechStack = sliderTechStackNames
+  .map((name) => getTechLogo(name))
+  .filter((tech): tech is NonNullable<typeof tech> => tech !== undefined);
+
+const sliderFeatures = [
+  { key: "seamless" },
+  { key: "flexible" },
+  { key: "performance" },
+  { key: "responsive" },
+  { key: "typescript" },
+  { key: "customizable" },
+  { key: "darkMode" },
+  { key: "ssr" },
 ];
 
 export default function Projects() {
@@ -161,7 +179,7 @@ export default function Projects() {
                   </h3>
                 </div>
                 <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
-                  {features.map(({ key }, idx) => (
+                  {motofamilyFeatures.map(({ key }, idx) => (
                     <motion.li
                       key={key}
                       initial={{ opacity: 0, x: -20 }}
@@ -189,7 +207,7 @@ export default function Projects() {
                   </h3>
                 </div>
                 <div className="flex flex-wrap gap-2 sm:gap-2.5">
-                  {techStack.map((tech) => (
+                  {motofamilyTechStack.map((tech) => (
                     <motion.div
                       key={tech.name}
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -222,7 +240,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="text-xs sm:text-sm text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300 font-medium flex items-center gap-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded"
                 >
-                  View on App Store
+                  {t("motofamily.viewAppStore")}
                   <ExternalLink className="w-3.5 h-3.5 shrink-0" />
                 </a>
                 <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">
@@ -234,7 +252,169 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="text-xs sm:text-sm text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300 font-medium flex items-center gap-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded"
                 >
-                  View on Google Play
+                  {t("motofamily.viewGooglePlay")}
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* React Seamless Slider Project Card */}
+        <motion.div
+          variants={item}
+          className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition-all duration-500"
+        >
+          {/* Decorative gradient background */}
+          <div className="absolute inset-0 bg-linear-to-br from-blue-50/50 via-transparent to-transparent dark:from-blue-950/20 pointer-events-none" />
+
+          {/* Main Content */}
+          <div className="relative p-4 sm:p-6 md:p-8 lg:p-12">
+            {/* Header Row - Mobile Optimized */}
+            <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8">
+              {/* Logo, Title & Meta */}
+              <div className="flex items-start gap-4 sm:gap-6">
+                {/* Logo */}
+                <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 shrink-0 rounded-xl sm:rounded-2xl bg-neutral-100 dark:bg-neutral-800 p-3 sm:p-4 flex items-center justify-center">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-full h-full text-blue-600 dark:text-blue-400"
+                    >
+                      <path
+                        d="M12 2L2 7L12 12L22 7L12 2Z"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M2 17L12 22L22 17"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M2 12L12 17L22 12"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Title & Meta */}
+                <div className="space-y-2 flex-1 min-w-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white">
+                      react-seamless-slider
+                    </h2>
+                    <span className="px-2.5 sm:px-3 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-800 w-fit">
+                      {t("reactSeamlessSlider.status")}
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400">
+                    {t("reactSeamlessSlider.role")} • 2025
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed mb-8 sm:mb-10">
+              {t("reactSeamlessSlider.description")}
+            </p>
+
+            {/* Features & Tech Stack Grid - Stack on mobile */}
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+              {/* Features List */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-1 h-6 bg-linear-to-b from-blue-500 to-cyan-500 rounded-full shrink-0" />
+                  <h3 className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white uppercase tracking-wide">
+                    {t("reactSeamlessSlider.featuresTitle")}
+                  </h3>
+                </div>
+                <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
+                  {sliderFeatures.map(({ key }, idx) => (
+                    <motion.li
+                      key={key}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: idx * 0.05 }}
+                      className="flex items-start gap-2 sm:gap-2.5 group/item"
+                    >
+                      <span className="text-blue-500 dark:text-blue-400 shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform">
+                        ~&gt;
+                      </span>
+                      <span className="leading-relaxed break-words">
+                        {t(`reactSeamlessSlider.features.${key}`)}
+                      </span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Tech Stack */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-1 h-6 bg-linear-to-b from-blue-500 to-cyan-500 rounded-full shrink-0" />
+                  <h3 className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white uppercase tracking-wide">
+                    {t("reactSeamlessSlider.techTitle")}
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-2 sm:gap-2.5">
+                  {sliderTechStack.map((tech) => (
+                    <motion.div
+                      key={tech.name}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-all group/tech"
+                    >
+                      <Image
+                        src={tech.logo}
+                        alt={tech.name}
+                        width={16}
+                        height={16}
+                        className={`w-4 h-4 sm:w-[18px] sm:h-[18px] ${tech.invertDark ? "dark:invert" : ""} group-hover/tech:scale-110 transition-transform shrink-0`}
+                      />
+                      <span className="text-[11px] sm:text-xs font-medium text-neutral-700 dark:text-neutral-300 whitespace-nowrap">
+                        {tech.name}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Links - Stack on mobile */}
+            <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-neutral-200 dark:border-neutral-800">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-2">
+                <a
+                  href="https://www.npmjs.com/package/react-seamless-slider"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs sm:text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:rounded"
+                >
+                  {t("reactSeamlessSlider.viewNpm")}
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                </a>
+                <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">
+                  •
+                </span>
+                <a
+                  href="https://github.com/yunusemreuveyik/react-seamless-slider"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs sm:text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:rounded"
+                >
+                  {t("reactSeamlessSlider.viewGitHub")}
                   <ExternalLink className="w-3.5 h-3.5 shrink-0" />
                 </a>
               </div>
