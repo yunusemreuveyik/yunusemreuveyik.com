@@ -1,170 +1,150 @@
 "use client";
 
-import Image from "next/image";
-import { useState, useEffect } from "react";
+import { InfiniteSlider, type SliderItem } from "react-seamless-slider";
+import "react-seamless-slider/InfiniteSlider.css";
 
-const techStack = [
+const techStack: SliderItem[] = [
   {
-    name: "React",
+    id: "react",
     logo: "/logos/tech/react.svg",
+    text: "React",
+    alt: "React",
   },
   {
-    name: "React Native",
+    id: "react-native",
     logo: "/logos/tech/react.svg",
+    text: "React Native",
+    alt: "React Native",
   },
   {
-    name: "Expo",
+    id: "expo",
     logo: "/logos/tech/expo.svg",
+    text: "Expo",
+    alt: "Expo",
     invertDark: true,
   },
   {
-    name: "TypeScript",
+    id: "typescript",
     logo: "/logos/tech/typescript.svg",
+    text: "TypeScript",
+    alt: "TypeScript",
   },
   {
-    name: "HTML5",
+    id: "html5",
     logo: "/logos/tech/html5.svg",
+    text: "HTML5",
+    alt: "HTML5",
   },
   {
-    name: "CSS3",
+    id: "css3",
     logo: "/logos/tech/css3.svg",
+    text: "CSS3",
+    alt: "CSS3",
   },
   {
-    name: "Angular",
+    id: "angular",
     logo: "/logos/tech/angular.svg",
+    text: "Angular",
+    alt: "Angular",
   },
   {
-    name: "Ionic",
+    id: "ionic",
     logo: "/logos/tech/ionic.svg",
+    text: "Ionic",
+    alt: "Ionic",
   },
   {
-    name: "Next.js",
+    id: "nextjs",
     logo: "/logos/tech/nextjs.svg",
+    text: "Next.js",
+    alt: "Next.js",
     invertDark: true,
   },
   {
-    name: "Node.js",
+    id: "nodejs",
     logo: "/logos/tech/nodejs.svg",
+    text: "Node.js",
+    alt: "Node.js",
   },
   {
-    name: "MongoDB",
+    id: "mongodb",
     logo: "/logos/tech/mongodb.svg",
+    text: "MongoDB",
+    alt: "MongoDB",
   },
   {
-    name: "SQL Server",
+    id: "sqlserver",
     logo: "/logos/tech/sqlserver.svg",
+    text: "SQL Server",
+    alt: "SQL Server",
   },
   {
-    name: "Azure",
+    id: "azure",
     logo: "/logos/tech/azure.svg",
+    text: "Azure",
+    alt: "Azure",
   },
   {
-    name: "Figma",
+    id: "figma",
     logo: "/logos/tech/figma.svg",
+    text: "Figma",
+    alt: "Figma",
   },
   {
-    name: "MUI",
+    id: "mui",
     logo: "/logos/tech/mui.svg",
+    text: "MUI",
+    alt: "MUI",
   },
   {
-    name: "Jest",
+    id: "jest",
     logo: "/logos/tech/jest.svg",
+    text: "Jest",
+    alt: "Jest",
   },
   {
-    name: "FAST",
+    id: "fast",
     logo: "/logos/tech/fast.svg",
+    text: "FAST",
+    alt: "FAST",
   },
   {
-    name: "Git",
+    id: "git",
     logo: "/logos/tech/git.svg",
+    text: "Git",
+    alt: "Git",
   },
   {
-    name: "Tailwind",
+    id: "tailwind",
     logo: "/logos/tech/tailwindcss.svg",
+    text: "Tailwind",
+    alt: "Tailwind",
   },
   {
-    name: "App Store",
+    id: "app-store",
     logo: "/logos/tech/apple.svg",
+    text: "App Store",
+    alt: "App Store",
     invertDark: true,
   },
   {
-    name: "Play Store",
+    id: "play-store",
     logo: "/logos/tech/android.svg",
+    text: "Play Store",
+    alt: "Play Store",
   },
 ];
 
 export default function TechSlider() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [shouldLoad, setShouldLoad] = useState(false);
-
-  // Lazy load images only when component is visible
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            // Delay loading slightly to prioritize critical content
-            setTimeout(() => setShouldLoad(true), 100);
-            observer.disconnect();
-          }
-        });
-      },
-      { rootMargin: "50px" }
-    );
-
-    const element = document.getElementById("tech-slider");
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // 2 copies is enough for seamless infinite scroll
-  const items = [...techStack, ...techStack];
-
   return (
-    <div id="tech-slider" className="w-full overflow-hidden">
-      <div className="relative">
-        {/* Gradient masks */}
-        <div className="absolute [dir=ltr]:left-0 [dir=rtl]:right-0 top-0 bottom-0 w-24 [dir=ltr]:bg-linear-to-r [dir=rtl]:bg-linear-to-l from-white dark:from-neutral-950 to-transparent z-10 pointer-events-none" />
-        <div className="absolute [dir=ltr]:right-0 [dir=rtl]:left-0 top-0 bottom-0 w-24 [dir=ltr]:bg-linear-to-l [dir=rtl]:bg-linear-to-r from-white dark:from-neutral-950 to-transparent z-10 pointer-events-none" />
-
-        {/* Scrolling track */}
-        <div className="flex overflow-hidden">
-          <div className="flex items-center gap-12 animate-infinite-scroll">
-            {items.map((tech, i) => (
-              <div
-                key={`${tech.name}-${i}`}
-                className="flex items-center gap-3 shrink-0 opacity-50 hover:opacity-100 transition-opacity cursor-pointer"
-              >
-                {shouldLoad ? (
-                  <Image
-                    src={tech.logo}
-                    alt={tech.name}
-                    width={28}
-                    height={28}
-                    className={`w-7 h-7 ${tech.invertDark ? "dark:invert" : ""}`}
-                    unoptimized
-                    loading="lazy"
-                  />
-                ) : (
-                  <div
-                    className={`w-7 h-7 bg-neutral-200 dark:bg-neutral-800 rounded ${
-                      tech.invertDark ? "dark:invert" : ""
-                    }`}
-                    aria-hidden="true"
-                  />
-                )}
-                <span className="text-sm text-neutral-600 dark:text-neutral-400 whitespace-nowrap font-medium">
-                  {tech.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    <div id="tech-slider" className="w-full">
+      <InfiniteSlider
+        items={techStack}
+        duration={30}
+        gap="3rem"
+        pauseOnHover={true}
+        showGradients={true}
+      />
     </div>
   );
 }
