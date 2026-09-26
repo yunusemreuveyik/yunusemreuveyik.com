@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/header";
 import MouseGlow from "@/components/mouse-glow";
 import { locales } from "../../i18n/routing";
+import { setRequestLocale } from "next-intl/server";
 import { Inter, Caveat } from "next/font/google";
 import { siteConfig, localeConfig, type Locale } from "@/lib/seo-config";
 import { SiteJsonLd } from "@/components/json-ld";
@@ -112,6 +113,8 @@ export default async function RootLayout({
   const { locale } = await params;
 
   if (!(locales as readonly string[]).includes(locale)) notFound();
+
+  setRequestLocale(locale);
 
   const messages = (await import(`../../i18n/messages/${locale}.json`)).default;
 
