@@ -1,8 +1,10 @@
 {
   "name": "Yunus Emre Uveyik - Portfolio",
   "short_name": "YE Uveyik",
-  "description": "Senior Frontend Developer specializing in React, Next.js, and TypeScript",
-  "start_url": "/",
+  "description": "Senior Frontend Developer — React, Next.js, MotoFamily, affordable SEO business websites",
+  "lang": "tr",
+  "start_url": "/tr/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#8b5cf6",
@@ -10,8 +12,8 @@
     {
       "src": "/icon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }
-

@@ -8,6 +8,7 @@ import {
   Linkedin,
   Briefcase,
   MessageSquareQuote,
+  LayoutGrid,
 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import GradientText from "@/components/gradient-text";
@@ -81,7 +82,10 @@ export default function WelcomeComponent() {
         </motion.div>
 
         {/* Explore links */}
-        <motion.div variants={item} className="flex justify-center gap-4 pt-2">
+        <motion.div
+          variants={item}
+          className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 pt-2"
+        >
           <Link
             href="/experience"
             prefetch={false}
@@ -90,7 +94,20 @@ export default function WelcomeComponent() {
             <Briefcase className="w-4 h-4" />
             {t("exploreExperience")}
           </Link>
-          <span className="text-neutral-300 dark:text-neutral-700">|</span>
+          <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">
+            |
+          </span>
+          <Link
+            href="/showcase"
+            prefetch={false}
+            className="inline-flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 hover:text-violet-600 dark:hover:text-violet-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded"
+          >
+            <LayoutGrid className="w-4 h-4" />
+            {t("exploreShowcase")}
+          </Link>
+          <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">
+            |
+          </span>
           <Link
             href="/references"
             prefetch={false}

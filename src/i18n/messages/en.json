@@ -5,6 +5,7 @@
     "projects": "Projects",
     "experience": "Experience",
     "references": "References",
+    "showcase": "Web Showcase",
     "menu": "Menu",
     "search": "Search",
     "searchPlaceholder": "Search..."
@@ -18,6 +19,7 @@
     "description": "Ex-Microsoft contractor reaching 1B+ users • React, TypeScript & React Native specialist",
     "exploreExperience": "View Experience",
     "exploreReferences": "View References",
+    "exploreShowcase": "Affordable Websites",
     "mailMe": "Mail Me",
     "linkedin": "LinkedIn",
     "github": "GitHub"
@@ -30,6 +32,17 @@
   "experience": {
     "sectionLabel": "Experience",
     "sectionTitle": "Where I've Worked",
+    "motofamily": {
+      "dateRange": "2025 — Present",
+      "title": "Founder",
+      "company": "MotoFamily",
+      "descriptions": [
+        "Founder and lead developer of MotoFamily — a social network and events platform for motorcycle enthusiasts.",
+        "Built and shipped iOS and Android apps with React Native and Expo; Node.js and MongoDB backend.",
+        "Live maps, real-time messaging, QR discount system, maintenance tracking, photo sharing, and race calendars.",
+        "Own product direction, UX, App Store and Google Play releases, and ongoing feature development."
+      ]
+    },
     "telescope": {
       "dateRange": "2023 — 2024",
       "title": "Frontend Team Lead Engineer",
@@ -227,26 +240,85 @@
       },
       "viewAppStore": "View on App Store",
       "viewGooglePlay": "View on Google Play"
-    },
-    "reactSeamlessSlider": {
-      "status": "Published",
-      "role": "Creator & Maintainer",
-      "description": "A seamless infinite scrolling slider component for React with TypeScript support. Features smooth, continuous scrolling without any visible jumps or blinks. Perfect for displaying logos, testimonials, or any content that needs to scroll infinitely.",
-      "featuresTitle": "Key Features",
-      "features": {
-        "seamless": "Seamless infinite scroll",
-        "flexible": "Flexible content support",
-        "performance": "Performance optimized",
-        "responsive": "Responsive design",
-        "typescript": "TypeScript support",
-        "customizable": "Highly customizable",
-        "darkMode": "Dark mode ready",
-        "ssr": "SSR compatible"
-      },
-      "techTitle": "Tech Stack",
-      "viewNpm": "View on NPM",
-      "viewGitHub": "View on GitHub"
     }
+  },
+  "showcase": {
+    "sectionLabel": "Web Showcase",
+    "sectionTitle": "Affordable business website development",
+    "intro": "Wondering how to get a website made without agency pricing? I build SEO-ready, mobile-first sites for local businesses — many delivered within a few days when content is ready. Live references and portfolio previews below.",
+    "valuesAria": "What you get",
+    "values": {
+      "seo": {
+        "title": "SEO built in",
+        "body": "Semantic headings, meta tags, performance, FAQ-style content, and local signals (address, hours, contact) — like my work on Dokuma Kuyumculuk and Sistem Teknik."
+      },
+      "budget": {
+        "title": "Low-budget friendly",
+        "body": "Focused scope: the pages that matter (home, services, contact, FAQs). No bloated CMS fees — modern Next.js you can grow over time."
+      },
+      "speed": {
+        "title": "Fast delivery",
+        "body": "When your copy and assets are ready, many brochure sites can go live within a few days. You get a clear delivery date before work starts."
+      },
+      "mobile": {
+        "title": "Mobile-first",
+        "body": "Most local customers find you on a phone. Layouts, tap targets, and WhatsApp/phone CTAs are first-class."
+      }
+    },
+    "sitesTitle": "Live client websites",
+    "sitesSubtitle": "Live client sites and hosted portfolio demos — open in a new tab to explore structure, speed, and SEO.",
+    "visitSite": "Visit live site",
+    "openPreview": "Open preview here",
+    "openFullDemo": "Open full demo",
+    "preview": {
+      "back": "Back to showcase",
+      "portfolioNote": "Portfolio preview on yunusemreuveyik.com",
+      "openOriginal": "Open live site",
+      "openFullDemo": "Open full demo",
+      "embedBlocked": "This site cannot be embedded in a frame. Use the button below to open it in a new tab.",
+      "retry": "Try again"
+    },
+    "contact": {
+      "whatsappButton": "Message on WhatsApp",
+      "whatsappMessage": "Hi, I'd like an affordable business website.",
+      "whatsappAria": "WhatsApp — {phone}"
+    },
+    "faqTitle": "Frequently asked questions",
+    "faq": {
+      "howTo": {
+        "q": "How do I get a website made?",
+        "a": "Email hello@yunusemreuveyik.com with your business name, services, and any logo or copy you have. We'll agree on pages, I'll send an affordable quote and delivery timeline."
+      },
+      "affordable": {
+        "q": "Can you build a cheap or affordable business website?",
+        "a": "Yes — focused scope instead of agency bundles: home, services, contact, FAQs. You don't pay for features you won't use; price is fixed once scope is clear."
+      },
+      "delivery": {
+        "q": "How fast can my site go live?",
+        "a": "If content is ready, many small-business sites can launch within a few days. Bilingual TR/EN or extra pages add time; you get a firm date before we start."
+      },
+      "who": {
+        "q": "Who is this for?",
+        "a": "Shops, trades, and service companies that need a credible web presence and local search visibility — not a six-figure custom platform on day one."
+      },
+      "seo": {
+        "q": "Will my site rank on Google?",
+        "a": "No one can guarantee rankings, but I implement technical SEO and content patterns that help local queries — structured FAQs, clear titles, fast loads, and proper metadata."
+      },
+      "stack": {
+        "q": "What do you build with?",
+        "a": "Next.js, React, and TypeScript — the same stack I use in senior product roles. Optional Turkish/English like dokumakuyumculuk.com."
+      },
+      "contact": {
+        "q": "How do we start?",
+        "a": "A short email is enough: your industry, target customers, sites you like. I'll reply with a simple roadmap and quote."
+      }
+    },
+    "ctaTitle": "Need a site like these?",
+    "ctaBody": "Tell me about your business — I'll suggest a lean page list and timeline.",
+    "ctaEmail": "hello@yunusemreuveyik.com",
+    "ctaButton": "Email for a quote",
+    "ctaProjectsLink": "See my product & open-source projects too"
   },
   "notFound": {
     "title": "Page Not Found",

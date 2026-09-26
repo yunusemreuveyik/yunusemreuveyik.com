@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/showcase-sources/palmarosa/node_modules
 /.pnp
 .pnp.*
 .yarn/*

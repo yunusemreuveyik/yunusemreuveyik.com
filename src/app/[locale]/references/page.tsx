@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { siteConfig, localeConfig, type Locale } from "@/lib/seo-config";
+import { localeConfig, type Locale } from "@/lib/seo-config";
+import { buildPageMetadata } from "@/lib/page-metadata";
 import TestimonialsClient from "./testimonials-client";
+import { PageJsonLd } from "@/components/json-ld";
 import { locales } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -16,24 +18,33 @@ export async function generateMetadata({
   const localeData = localeConfig[locale as Locale] || localeConfig.en;
   const pageData = localeData.pages.references;
 
-  return {
+  return buildPageMetadata({
+    locale,
+    segment: "references",
     title: pageData.title,
     description: pageData.description,
-    openGraph: {
-      title: pageData.title,
-      description: pageData.description,
-      url: `${siteConfig.url}/${locale}/references`,
-    },
-    alternates: {
-      canonical: `${siteConfig.url}/${locale}/references`,
-      languages: {
-        en: `${siteConfig.url}/en/references`,
-        tr: `${siteConfig.url}/tr/references`,
-      },
-    },
-  };
+  });
 }
 
-export default function ReferencesPage() {
-  return <TestimonialsClient />;
+export default async function ReferencesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const localeData = localeConfig[locale as Locale] || localeConfig.en;
+  const pageData = localeData.pages.references;
+
+  return (
+    <>
+      <PageJsonLd
+        locale={locale}
+        title={pageData.title}
+        description={pageData.description}
+        pathSegment="references"
+        breadcrumbLabel={locale === "tr" ? "Referanslar" : "References"}
+      />
+      <TestimonialsClient />
+    </>
+  );
 }

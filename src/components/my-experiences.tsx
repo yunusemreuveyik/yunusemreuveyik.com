@@ -5,11 +5,14 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Badge from "@/components/badge";
+import { AppStoreBadge, GooglePlayBadge } from "@/components/store-badges";
 import Image from "next/image";
 
 interface ExperienceConfig {
   id: string;
   companyUrl?: string;
+  appStoreUrl?: string;
+  playStoreUrl?: string;
   technologies: string[];
 }
 
@@ -40,6 +43,22 @@ const techLogos: Record<string, string> = {
 };
 
 const experienceConfigs: ExperienceConfig[] = [
+  {
+    id: "motofamily",
+    companyUrl: "https://motofamily.net/",
+    appStoreUrl: "https://apps.apple.com/app/motofamily/id6749791459",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.anonymous.MotoFamily",
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Firebase",
+      "Azure",
+    ],
+  },
   {
     id: "telescope",
     companyUrl: "https://www.telescopelabs.io/",
@@ -236,6 +255,25 @@ export default function MyExperiences() {
                 {/* Title & Company */}
                 <div className="flex items-start gap-4">
                   {/* Company Logo */}
+                  {exp.id === "motofamily" && (
+                    <div className="shrink-0 mt-1 w-11 h-11 flex items-center justify-center">
+                      {/* Png-04 is white-on-black; Png-03 file is solid black — invert / blend per theme */}
+                      <Image
+                        src="/logos/motofamily/Png-04.png"
+                        alt="MotoFamily logo"
+                        width={44}
+                        height={44}
+                        className="h-11 w-11 object-contain dark:hidden invert"
+                      />
+                      <Image
+                        src="/logos/motofamily/Png-04.png"
+                        alt="MotoFamily logo"
+                        width={44}
+                        height={44}
+                        className="hidden h-11 w-11 object-contain dark:block mix-blend-lighten"
+                      />
+                    </div>
+                  )}
                   {exp.id === "telescope" && (
                     <div className="shrink-0 mt-1">
                       <TelescopeLogo className="w-10 h-10" />
@@ -321,6 +359,36 @@ export default function MyExperiences() {
                     </Badge>
                   ))}
                 </div>
+
+                {exp.appStoreUrl && exp.playStoreUrl && (
+                  <div className="flex flex-wrap items-center gap-3 pt-4">
+                    <a
+                      href={exp.appStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded shrink-0"
+                      aria-label="Download on the App Store"
+                    >
+                      <AppStoreBadge
+                        className="h-9 w-auto min-w-[108px] dark:hidden"
+                        variant="black"
+                      />
+                      <AppStoreBadge
+                        className="hidden h-9 w-auto min-w-[108px] dark:block"
+                        variant="white"
+                      />
+                    </a>
+                    <a
+                      href={exp.playStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:rounded shrink-0"
+                      aria-label="Get it on Google Play"
+                    >
+                      <GooglePlayBadge className="h-9 w-auto min-w-[121px]" />
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           );

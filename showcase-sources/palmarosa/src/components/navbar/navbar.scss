@@ -1,0 +1,110 @@
+.palmarosa-navbar-wrapper {
+    height: 70px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+
+    .logo-wrapper {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        .logo {
+            width: 120px;
+            height: inherit;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: black;
+            text-transform: uppercase;
+        }
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1100;
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            transition: 0.3s;
+        }
+
+        .bar.open:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .bar.open:nth-child(2) {
+            opacity: 0;
+        }
+
+        .bar.open:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+    }
+
+    .menu-wrapper {
+        display: flex;
+        gap: 20px;
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            text-transform: uppercase;
+        }
+    }
+
+    .menu-item {
+        transition: color 0.3s ease;
+        &:hover {
+            color: #a9712d;
+        }
+    }
+
+    // Responsive behavior
+    @media (max-width: 768px) {
+        .hamburger {
+            display: flex;
+        }
+
+        .logo-wrapper {
+            .logo {
+                margin-left: -20px;
+                width: 80px;
+            }
+            .brand-name {
+                font-size: 1.2rem;
+            }
+        }
+        .menu-wrapper {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 20px 0;
+            display: none;
+            gap: 15px;
+        }
+
+        .menu-wrapper.active {
+            display: flex;
+        }
+    }
+}

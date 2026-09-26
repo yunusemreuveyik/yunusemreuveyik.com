@@ -5,6 +5,7 @@
     "projects": "Projeler",
     "experience": "Deneyim",
     "references": "Referanslar",
+    "showcase": "Web Vitrini",
     "menu": "Menü",
     "search": "Ara",
     "searchPlaceholder": "Ara..."
@@ -18,6 +19,7 @@
     "description": "Ex-Microsoft kontratlı, 1 Milyar+ kullanıcıya ulaşan projeler • React, TypeScript & React Native uzmanı",
     "exploreExperience": "Deneyimlerim",
     "exploreReferences": "Referanslarım",
+    "exploreShowcase": "Uygun Fiyat Web Sitesi",
     "mailMe": "E-posta",
     "linkedin": "LinkedIn",
     "github": "GitHub"
@@ -30,6 +32,17 @@
   "experience": {
     "sectionLabel": "Deneyim",
     "sectionTitle": "Çalıştığım Yerler",
+    "motofamily": {
+      "dateRange": "2025 — Günümüz",
+      "title": "Kurucu",
+      "company": "MotoFamily",
+      "descriptions": [
+        "Motorsiklet tutkunları için sosyal ağ ve etkinlik platformu MotoFamily'nin kurucusu ve geliştiricisiyim.",
+        "React Native ve Expo ile iOS/Android uygulamaları; Node.js ve MongoDB ile backend geliştirdim.",
+        "Canlı harita, gerçek zamanlı mesajlaşma, QR indirim sistemi, bakım takibi, fotoğraf paylaşımı ve yarış takvimleri.",
+        "Ürün yönü, UX, App Store ve Google Play yayınları ile sürekli özellik geliştirmesini yönetiyorum."
+      ]
+    },
     "telescope": {
       "dateRange": "2023 — 2024",
       "title": "Frontend Takım Lideri Mühendis",
@@ -224,26 +237,85 @@
       },
       "viewAppStore": "App Store'da Görüntüle",
       "viewGooglePlay": "Google Play'de Görüntüle"
-    },
-    "reactSeamlessSlider": {
-      "status": "Yayında",
-      "role": "Geliştirici & Bakımcı",
-      "description": "TypeScript desteği ile React için sorunsuz sonsuz kaydırma slider bileşeni. Görünür sıçrama veya yanıp sönme olmadan pürüzsüz, sürekli kaydırma özellikleri. Logolar, referanslar veya sonsuz kaydırma gerektiren herhangi bir içerik için mükemmel.",
-      "featuresTitle": "Öne Çıkan Özellikler",
-      "features": {
-        "seamless": "Sorunsuz sonsuz kaydırma",
-        "flexible": "Esnek içerik desteği",
-        "performance": "Performans optimizasyonu",
-        "responsive": "Duyarlı tasarım",
-        "typescript": "TypeScript desteği",
-        "customizable": "Yüksek özelleştirilebilirlik",
-        "darkMode": "Karanlık mod desteği",
-        "ssr": "SSR uyumlu"
-      },
-      "techTitle": "Kullanılan Teknolojiler",
-      "viewNpm": "NPM'de Görüntüle",
-      "viewGitHub": "GitHub'da Görüntüle"
     }
+  },
+  "showcase": {
+    "sectionLabel": "Web Vitrini",
+    "sectionTitle": "Uygun fiyatlı internet sitesi yapımı",
+    "intro": "Nasıl site yaptırabilirim diyorsanız: ajans fiyatı olmadan, SEO uyumlu ve mobil öncelikli işletme siteleri geliştiriyorum. Ucuz internet sitesi arayan küçük işletmeler için odaklı kapsam; metinleriniz hazırsa birçok proje birkaç gün içinde teslim. Aşağıda canlı referanslar ve portfolyo önizlemeleri var.",
+    "valuesAria": "Neler sunuyorum",
+    "values": {
+      "seo": {
+        "title": "SEO dahil",
+        "body": "Anlamlı başlıklar, meta etiketler, performans, SSS tarzı içerik ve yerel sinyaller (adres, saat, iletişim) — Dokuma Kuyumculuk ve Sistem Teknik örneklerinde olduğu gibi."
+      },
+      "budget": {
+        "title": "Uygun fiyat",
+        "body": "Ucuz internet sitesi arayanlar için şeffaf kapsam: ana sayfa, hizmetler, iletişim, SSS. Gereksiz modül veya aylık CMS yükü yok."
+      },
+      "speed": {
+        "title": "Hızlı teslim",
+        "body": "İçerik hazırsa tipik vitrin siteleri birkaç gün içinde yayına alınabilir. Teslim tarihi işe başlamadan net söylenir."
+      },
+      "mobile": {
+        "title": "Mobil öncelik",
+        "body": "Yerel müşterilerin çoğu telefondan gelir. WhatsApp ve arama butonları birincil."
+      }
+    },
+    "sitesTitle": "Canlı müşteri siteleri",
+    "sitesSubtitle": "Canlı müşteri siteleri ve barındırılan portfolyo demoları — yeni sekmede açıp yapı, hız ve SEO’yu inceleyin.",
+    "visitSite": "Canlı siteyi aç",
+    "openPreview": "Burada önizle",
+    "openFullDemo": "Tam demoyu aç",
+    "preview": {
+      "back": "Web vitinine dön",
+      "portfolioNote": "yunusemreuveyik.com üzerinde portfolyo önizlemesi",
+      "openOriginal": "Canlı siteyi aç",
+      "openFullDemo": "Tam demoyu aç",
+      "embedBlocked": "Site çerçeve içinde gösterilemiyor. Yeni sekmede açmak için aşağıdaki düğmeyi kullanın.",
+      "retry": "Tekrar dene"
+    },
+    "contact": {
+      "whatsappButton": "WhatsApp ile Yazın",
+      "whatsappMessage": "Merhaba, uygun fiyatlı internet sitesi yaptırmak istiyorum.",
+      "whatsappAria": "WhatsApp — {phone}"
+    },
+    "faqTitle": "Sık sorulan sorular",
+    "faq": {
+      "howTo": {
+        "q": "Nasıl site yaptırabilirim?",
+        "a": "hello@yunusemreuveyik.com adresine işletme adınızı, ne sattığınızı ve varsa logo/metinleri yazın. Hangi sayfaların gerekli olduğunu birlikte belirler, uygun fiyatlı teklif ve teslim süresini paylaşırım."
+      },
+      "affordable": {
+        "q": "Ucuz internet sitesi ve uygun fiyatlı internet sitesi yapımı mümkün mü?",
+        "a": "Evet — ajans paketleri yerine ihtiyacınız kadar sayfa (ana sayfa, hizmetler, iletişim, SSS). Kullanmayacağınız özellikler için ödeme yapmazsınız; fiyat kapsam netleşince sabitlenir."
+      },
+      "delivery": {
+        "q": "Site ne kadar sürede teslim edilir?",
+        "a": "Metinleriniz ve görselleriniz hazırsa birçok küçük işletme sitesi birkaç gün içinde yayına alınabilir. Türkçe/İngilizce veya ekstra sayfa varsa süre uzar; başlamadan net tarih verilir."
+      },
+      "who": {
+        "q": "Kimler için?",
+        "a": "Dükkan, esnaf ve hizmet firmaları: güven veren web varlığı ve yerel arama görünürlüğü — ilk günden dev platform bütçesi olmadan."
+      },
+      "seo": {
+        "q": "Google'da çıkar mıyım?",
+        "a": "Sıralama garantisi verilemez; ancak yerel aramalara yardımcı teknik SEO ve içerik kalıpları uygulanır — SSS, net başlıklar, hızlı yükleme, doğru metadata."
+      },
+      "stack": {
+        "q": "Hangi teknoloji?",
+        "a": "Next.js, React ve TypeScript. İstenirse dokumakuyumculuk.com gibi Türkçe/İngilizce."
+      },
+      "contact": {
+        "q": "Nasıl başlarız?",
+        "a": "E-posta ile kısa bir özet yeterli: sektörünüz, hedef müşteri, beğendiğiniz örnek siteler. Aynı gün içinde dönüş ve sade bir yol haritası."
+      }
+    },
+    "ctaTitle": "Ucuz internet sitesi mi arıyorsunuz?",
+    "ctaBody": "Uygun fiyatlı internet sitesi yapımı için kısaca yazın — birkaç gün içinde teslim mümkün mü, birlikte netleştirelim.",
+    "ctaEmail": "hello@yunusemreuveyik.com",
+    "ctaButton": "Teklif için e-posta",
+    "ctaProjectsLink": "Ürün ve açık kaynak projelerime de bakın"
   },
   "notFound": {
     "title": "Sayfa Bulunamadı",

@@ -1,0 +1,52 @@
+.room-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: flex-start;
+
+    .gallery-wrapper {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .room-info {
+        flex: 1;
+        min-width: 300px;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #a9712d;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.75rem;
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 1rem;
+                color: #333;
+            }
+
+            svg {
+                color: #a9712d;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .room-section {
+        flex-direction: column;
+    }
+}

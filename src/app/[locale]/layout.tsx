@@ -1,5 +1,5 @@
 import "../../app/globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Providers from "@/components/providers";
 import { notFound } from "next/navigation";
 import Header from "@/components/header";
@@ -7,7 +7,8 @@ import MouseGlow from "@/components/mouse-glow";
 import { locales } from "../../i18n/routing";
 import { Inter, Caveat } from "next/font/google";
 import { siteConfig, localeConfig, type Locale } from "@/lib/seo-config";
-import { HomeJsonLd } from "@/components/json-ld";
+import { SiteJsonLd } from "@/components/json-ld";
+import { absoluteUrl } from "@/lib/seo-config";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,6 +26,15 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
+
 // Generate metadata for the layout
 export async function generateMetadata({
   params,
@@ -38,7 +48,7 @@ export async function generateMetadata({
     metadataBase: new URL(siteConfig.url),
     title: {
       default: localeData.title,
-      template: `%s | ${siteConfig.name}`,
+      template: `%s`,
     },
     description: localeData.description,
     keywords: [...siteConfig.keywords],
@@ -60,7 +70,7 @@ export async function generateMetadata({
       type: "website",
       locale: locale === "tr" ? "tr_TR" : "en_US",
       alternateLocale: locale === "tr" ? "en_US" : "tr_TR",
-      url: `${siteConfig.url}/${locale}`,
+      url: absoluteUrl(`/${locale}`),
       siteName: siteConfig.name,
       title: localeData.title,
       description: localeData.description,
@@ -81,10 +91,11 @@ export async function generateMetadata({
       creator: "@yunusemreuveyik",
     },
     alternates: {
-      canonical: `${siteConfig.url}/${locale}`,
+      canonical: absoluteUrl(`/${locale}`),
       languages: {
-        en: `${siteConfig.url}/en`,
-        tr: `${siteConfig.url}/tr`,
+        en: absoluteUrl("/en"),
+        tr: absoluteUrl("/tr"),
+        "x-default": absoluteUrl("/tr"),
       },
     },
     manifest: "/manifest.json",
@@ -111,7 +122,7 @@ export default async function RootLayout({
       className={`${inter.variable} ${caveat.variable}`}
     >
       <head>
-        <HomeJsonLd locale={locale} />
+        <SiteJsonLd locale={locale} />
       </head>
       <body className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 antialiased font-sans">
         <Providers locale={locale} messages={messages}>

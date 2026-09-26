@@ -34,6 +34,26 @@ const nextConfig: NextConfig = {
 
   // Vercel-specific optimizations
   reactStrictMode: true, // Enable React strict mode
+
+  /** Palmarosa Vite SPA — client routes under /showcase-sites/palmarosa/ */
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/showcase-sites/palmarosa",
+          destination: "/showcase-sites/palmarosa/index.html",
+        },
+        {
+          source: "/showcase-sites/palmarosa/",
+          destination: "/showcase-sites/palmarosa/index.html",
+        },
+        {
+          source: "/showcase-sites/palmarosa/:path((?!.*\\.).*)",
+          destination: "/showcase-sites/palmarosa/index.html",
+        },
+      ],
+    };
+  },
 };
 
 export default withNextIntl(nextConfig);

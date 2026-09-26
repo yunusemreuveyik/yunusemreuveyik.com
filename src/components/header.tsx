@@ -13,6 +13,7 @@ import {
   Briefcase,
   MessageSquareQuote,
   FolderKanban,
+  LayoutGrid,
 } from "lucide-react";
 import GradientText from "./gradient-text";
 
@@ -20,6 +21,7 @@ const navItems = [
   { href: "/", key: "home", icon: Home },
   { href: "/experience", key: "experience", icon: Briefcase },
   { href: "/projects", key: "projects", icon: FolderKanban },
+  { href: "/showcase", key: "showcase", icon: LayoutGrid },
   { href: "/references", key: "references", icon: MessageSquareQuote },
 ] as const;
 

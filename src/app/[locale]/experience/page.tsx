@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { siteConfig, localeConfig, type Locale } from "@/lib/seo-config";
+import { localeConfig, siteConfig, type Locale } from "@/lib/seo-config";
+import { buildPageMetadata } from "@/lib/page-metadata";
 import ExperienceClient from "./experience-client";
+import { PageJsonLd } from "@/components/json-ld";
 import { locales } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -16,24 +18,47 @@ export async function generateMetadata({
   const localeData = localeConfig[locale as Locale] || localeConfig.en;
   const pageData = localeData.pages.experience;
 
-  return {
+  return buildPageMetadata({
+    locale,
+    segment: "experience",
     title: pageData.title,
     description: pageData.description,
-    openGraph: {
-      title: pageData.title,
-      description: pageData.description,
-      url: `${siteConfig.url}/${locale}/experience`,
-    },
-    alternates: {
-      canonical: `${siteConfig.url}/${locale}/experience`,
-      languages: {
-        en: `${siteConfig.url}/en/experience`,
-        tr: `${siteConfig.url}/tr/experience`,
-      },
-    },
-  };
+    keywords: [
+      ...siteConfig.keywords,
+      ...(locale === "tr"
+        ? [
+            "MotoFamily kurucu",
+            "Microsoft frontend deneyim",
+            "Antalya yazılım geliştirici",
+          ]
+        : [
+            "MotoFamily founder",
+            "Microsoft frontend experience",
+            "Antalya software developer",
+          ]),
+    ],
+  });
 }
 
-export default function ExperiencePage() {
-  return <ExperienceClient />;
+export default async function ExperiencePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const localeData = localeConfig[locale as Locale] || localeConfig.en;
+  const pageData = localeData.pages.experience;
+
+  return (
+    <>
+      <PageJsonLd
+        locale={locale}
+        title={pageData.title}
+        description={pageData.description}
+        pathSegment="experience"
+        breadcrumbLabel={locale === "tr" ? "Deneyim" : "Experience"}
+      />
+      <ExperienceClient />
+    </>
+  );
 }
