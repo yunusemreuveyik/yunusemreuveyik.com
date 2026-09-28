@@ -120,15 +120,15 @@ export default function ShowcaseClient() {
             </p>
           </div>
 
-          <ul className="space-y-6 list-none p-0 m-0">
+          <ul className="grid grid-cols-1 lg:grid-cols-2 gap-6 list-none p-0 m-0">
             {showcaseSites.map((site) => (
-              <li key={site.id}>
-                <article className="group relative overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <li key={site.id} className="min-h-0">
+                <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <ShowcaseLivePreview
                     href={showcaseSiteBrowseHref(site)}
                     title={site.name[locale]}
                   />
-                  <div className="relative p-6 sm:p-8 space-y-4">
+                  <div className="relative flex flex-1 flex-col p-6 sm:p-8 space-y-4">
                     <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-violet-50/40 via-transparent to-transparent dark:from-violet-950/15 rounded-b-2xl" />
                     <div className="relative flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                       <div className="space-y-1">
