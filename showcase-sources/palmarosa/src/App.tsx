@@ -1,11 +1,10 @@
 // src/App.tsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.scss";
 import Home from "./pages/homePage/home";
 import Contact from "./pages/contactPage/contactPage";
 import MainLayout from "./layout/mainLayout";
 import Rooms from "./pages/roomPage/roomPage";
-import HotelPage from "./pages/hotelPage/hotelPage";
 
 function App() {
   return (
@@ -27,14 +26,7 @@ function App() {
             </MainLayout>
           }
         />
-        <Route
-          path="/about"
-          element={
-            <MainLayout>
-              <HotelPage />
-            </MainLayout>
-          }
-        />
+        <Route path="/about" element={<Navigate to="/" replace />} />
         <Route
           path="/contact"
           element={

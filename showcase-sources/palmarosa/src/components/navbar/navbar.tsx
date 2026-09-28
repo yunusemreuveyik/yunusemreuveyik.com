@@ -29,13 +29,6 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          to="/about"
-          className="menu-item"
-          onClick={() => setMenuOpen(false)}
-        >
-          About Hotel
-        </Link>
-        <Link
           to="/rooms"
           className="menu-item"
           onClick={() => setMenuOpen(false)}
