@@ -54,6 +54,33 @@ export const siteConfig = {
 
 export const showcaseSites = [
   {
+    id: "motofamily",
+    url: "https://motofamily.net/",
+    name: { en: "MotoFamily", tr: "MotoFamily" },
+    industry: {
+      en: "Motorcycle community app · Turkey",
+      tr: "Motosiklet topluluğu uygulaması · Türkiye",
+    },
+    summary: {
+      en: "Marketing site for the MotoFamily app — feature pages, partner businesses, a public live map, and App Store / Google Play downloads, in Turkish and English with SEO built in.",
+      tr: "MotoFamily uygulamasının tanıtım sitesi — özellik sayfaları, anlaşmalı işletmeler, herkese açık canlı harita ve App Store / Google Play indirme bağlantıları; Türkçe ve İngilizce, SEO dahil.",
+    },
+    highlights: {
+      en: [
+        "Turkish / English (TR·EN)",
+        "App Store and Google Play calls to action",
+        "Public live map and seller pages",
+        "Sitemap, hreflang, and structured data",
+      ],
+      tr: [
+        "Türkçe / İngilizce (TR·EN)",
+        "App Store ve Google Play çağrıları",
+        "Herkese açık canlı harita ve satıcı sayfaları",
+        "Site haritası, hreflang ve yapılandırılmış veri",
+      ],
+    },
+  },
+  {
     id: "dokuma-kuyumculuk",
     url: "https://dokumakuyumculuk.com/",
     name: { en: "Dokuma Kuyumculuk", tr: "Dokuma Kuyumculuk" },
@@ -227,7 +254,7 @@ export const localeConfig = {
         title:
           "Affordable Business Websites & SEO Showcase | Yunus Emre Uveyik",
         description:
-          "Affordable business website development with SEO built in — many sites delivered within a few days. Live examples: Dokuma Kuyumculuk, Sistem Teknik, and Palmarosa Hotel preview. Next.js, mobile-first, TR/EN.",
+          "Affordable business website development with SEO built in — many sites delivered within a few days. Live examples: MotoFamily, Dokuma Kuyumculuk, Sistem Teknik, and Palmarosa Hotel preview. Next.js, mobile-first, TR/EN.",
       },
       about: {
         title: "About - Yunus Emre Uveyik",
@@ -265,7 +292,7 @@ export const localeConfig = {
         title:
           "Uygun Fiyatlı İşletme Web Siteleri & SEO Vitrini | Yunus Emre Uveyik",
         description:
-          "SEO dahil uygun fiyatlı işletme sitesi — içerik hazırsa birçok proje birkaç gün içinde teslim. Canlı örnekler: Dokuma Kuyumculuk, Sistem Teknik ve Palmarosa Hotel önizlemesi. Next.js, mobil öncelikli, TR/EN.",
+          "SEO dahil uygun fiyatlı işletme sitesi — içerik hazırsa birçok proje birkaç gün içinde teslim. Canlı örnekler: MotoFamily, Dokuma Kuyumculuk, Sistem Teknik ve Palmarosa Hotel önizlemesi. Next.js, mobil öncelikli, TR/EN.",
       },
       about: {
         title: "Hakkımda - Yunus Emre Uveyik",

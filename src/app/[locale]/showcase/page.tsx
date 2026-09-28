@@ -32,6 +32,8 @@ export async function generateMetadata({
     keywords: [
       ...siteConfig.keywords,
       ...showcaseKeywords[lang],
+      "MotoFamily",
+      "motofamily.net",
       "Dokuma Kuyumculuk",
       "Sistem Teknik Antalya",
       "dokumakuyumculuk.com",

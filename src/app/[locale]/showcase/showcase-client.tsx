@@ -22,6 +22,7 @@ import {
 import { Link } from "@/i18n/routing";
 import ShowcaseContactBar from "@/components/showcase-contact-bar";
 import ShowcaseWhatsAppFloat from "@/components/showcase-whatsapp-float";
+import ShowcaseLivePreview from "@/components/showcase-live-preview";
 import { getTelHref, getWhatsAppUrl } from "@/lib/contact";
 
 const container = {
@@ -123,9 +124,13 @@ export default function ShowcaseClient() {
             {showcaseSites.map((site) => (
               <li key={site.id}>
                 <article className="group relative overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="absolute inset-0 bg-linear-to-br from-violet-50/40 via-transparent to-transparent dark:from-violet-950/15 pointer-events-none" />
+                  <ShowcaseLivePreview
+                    href={showcaseSiteBrowseHref(site)}
+                    title={site.name[locale]}
+                  />
                   <div className="relative p-6 sm:p-8 space-y-4">
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                    <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-violet-50/40 via-transparent to-transparent dark:from-violet-950/15 rounded-b-2xl" />
+                    <div className="relative flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                       <div className="space-y-1">
                         <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">
                           {site.name[locale]}

@@ -265,6 +265,10 @@
     "sitesTitle": "Canlı müşteri siteleri",
     "sitesSubtitle": "Canlı müşteri siteleri ve barındırılan portfolyo demoları — yeni sekmede açıp yapı, hız ve SEO’yu inceleyin.",
     "visitSite": "Canlı siteyi aç",
+    "livePreviewBadge": "Canlı önizleme",
+    "livePreviewFrameTitle": "{site} — canlı önizleme",
+    "livePreviewOpen": "{site} sitesini yeni sekmede aç",
+    "livePreviewOpenShort": "Tam siteyi aç",
     "openPreview": "Burada önizle",
     "openFullDemo": "Tam demoyu aç",
     "preview": {
